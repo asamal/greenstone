@@ -10,6 +10,6 @@ class GreenstoneApplicationTests {
     @Test
     void contextLoads() {
         System.out.println("Test");
-        assertTrue(true);
+        assertTrue(false);
     }
 }
