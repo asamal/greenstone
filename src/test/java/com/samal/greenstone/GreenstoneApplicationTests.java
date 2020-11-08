@@ -9,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class GreenstoneApplicationTests {
     @Test
     void contextLoads() {
+        // First Jira Ticket
         System.out.println("Test");
         assertTrue(true);
     }
