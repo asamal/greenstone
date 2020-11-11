@@ -8,6 +8,7 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/jakarta/persistence/jakarta.persistence-api/2.2.3/jakarta.persistence-api-2.2.3-sources.jar!/" />
+      <root url="file://$MAVEN_REPOSITORY$/jakarta/persistence/jakarta.persistence-api/2.2.3" />
     </SOURCES>
   </library>
 </component>
