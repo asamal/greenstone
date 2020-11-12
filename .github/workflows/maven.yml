@@ -55,5 +55,6 @@ jobs:
           push: true
           tags: sanek555/green-stone:latest
           file: ./docker/Dockerfile
+          context: .
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
