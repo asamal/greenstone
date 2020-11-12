@@ -55,6 +55,6 @@ jobs:
           push: true
           tags: sanek555/green-stone:latest
           build-args: |
-            -f=docker/Dockerfile
+            file=docker/Dockerfile
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
