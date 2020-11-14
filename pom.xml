@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.samal</groupId>
-    <artifactId>greenstone</artifactId>
+    <artifactId>green-stone</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>greenstone</name>
+    <name>green-stone</name>
     <description>Green Stone project for Spring Boot</description>
 
     <properties>
@@ -75,10 +75,6 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.6</version>
@@ -97,6 +93,23 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <layers>
+                        <enabled>true</enabled>
+                    </layers>
+                    <image>
+                        <name>docker.io/sanek555/${project.artifactId}:v1</name>
+                    </image>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>2.5.2</version>
             </plugin>
         </plugins>
     </build>
