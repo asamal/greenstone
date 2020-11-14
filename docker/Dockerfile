@@ -1,5 +1,4 @@
 # the first stage of our build will extract the layers
-# the first stage of our build will extract the layers
 FROM adoptopenjdk:14-jre-hotspot as builder
 WORKDIR application
 ARG JAR_FILE=target/green-stone*.jar
