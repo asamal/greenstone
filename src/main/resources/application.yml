@@ -1,0 +1,15 @@
+server:
+  port: 8080
+#  servlet:
+#    context-path: /resource-server
+
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8083/auth/realms/greenstone
+          jwk-set-uri: http://localhost:8083/auth/realms/greenstone/protocol/openid-connect/certs
