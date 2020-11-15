@@ -112,13 +112,6 @@
                     </image>
                 </configuration>
             </plugin>
-<!--            uncomment to build docker image with jib-->
-<!--            mvn compile jib:build -Dimage=<docker registry name>/greenstone:v1-->
-<!--            <plugin>-->
-<!--                <groupId>com.google.cloud.tools</groupId>-->
-<!--                <artifactId>jib-maven-plugin</artifactId>-->
-<!--                <version>2.5.2</version>-->
-<!--            </plugin>-->
         </plugins>
     </build>
 
