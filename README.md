@@ -1,11 +1,11 @@
 # GreenStone
 
-#Build docker container. 
+## Build docker container 
 
 Run from root directory:  
 `docker build -t greenstone:v1 . -f docker/Dockerfile`
 
-#Naming convention. 
+## Naming convention 
 
 List of names:  
 `greenstone` - internal name used in the code  
