@@ -1,7 +1,15 @@
 server:
-  port: 8080
+  port: 8083
 #  servlet:
 #    context-path: /resource-server
+
+keycloak:
+  server:
+    contextPath: /auth
+    adminUser:
+      username: bael-admin
+      password: password
+    realmImportFile: baeldung-realm.json
 
 spring:
   output:
@@ -13,3 +21,6 @@ spring:
         jwt:
           issuer-uri: http://localhost:8083/auth/realms/greenstone
           jwk-set-uri: http://localhost:8083/auth/realms/greenstone/protocol/openid-connect/certs
+  datasource:
+    username: sa
+    url: jdbc:h2:mem:testdb

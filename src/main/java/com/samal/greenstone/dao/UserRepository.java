@@ -6,7 +6,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import java.util.List;
 
-@RepositoryRestResource
+@RepositoryRestResource(path = "customers")
 public interface UserRepository extends CrudRepository<User, Long> {
     User findById(long id);
 
