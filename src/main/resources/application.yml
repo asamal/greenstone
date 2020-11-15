@@ -1,0 +1,14 @@
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: 49d2f6faed284d742b47
+            clientSecret: 0080e414065d4ae5f2e33adad53aaff54a3ce992
+#logging:
+#  level:
+#    org.springframework.security: DEBUG
