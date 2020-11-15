@@ -9,14 +9,15 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.samal</groupId>
-    <artifactId>green-stone</artifactId>
+    <artifactId>greenstone</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>green-stone</name>
+    <name>GreenStone</name>
     <description>Green Stone project for Spring Boot</description>
 
     <properties>
         <java.version>11</java.version>
-        <sonar.projectKey>green-stone</sonar.projectKey>
+        <sonar.projectKey>greenstone</sonar.projectKey>
+        <sonar.projectName>GreenStone</sonar.projectName>
         <sonar.organization>asamal</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
@@ -112,7 +113,7 @@
                 </configuration>
             </plugin>
 <!--            uncomment to build docker image with jib-->
-<!--            mvn compile jib:build -Dimage=<docker registry name>/green-stone:v1-->
+<!--            mvn compile jib:build -Dimage=<docker registry name>/greenstone:v1-->
 <!--            <plugin>-->
 <!--                <groupId>com.google.cloud.tools</groupId>-->
 <!--                <artifactId>jib-maven-plugin</artifactId>-->
