@@ -13,6 +13,7 @@
 </head>
 <body>
 <h1>Login</h1>
+<div class="container text-danger error"></div>
 <div class="container unauthenticated">
     <div>
         With GitHub: <a href="/oauth2/authorization/github">click here</a>
@@ -55,6 +56,13 @@
             })
             return true;
           }
+          $.get("/error", function(data) {
+              if (data) {
+                  $(".error").html(data);
+              } else {
+                  $(".error").html('');
+              }
+          });
         </script>
 </body>
 </html>
