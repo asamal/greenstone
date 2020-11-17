@@ -24,6 +24,6 @@ hs_err_pid*
 
 .idea/**
 .shelf/**
-greenstone.iml
-greenstone.ipr
-greenstone.iws
+*.iml
+*.ipr
+*.iws
