@@ -150,6 +150,8 @@
                 <version>1.2.5</version>
                 <configuration>
                     <sonarServer>https://sonarcloud.io</sonarServer>
+                    <sonarLookBackSeconds>60</sonarLookBackSeconds>
+                    <waitForProcessingSeconds>120</waitForProcessingSeconds>
                 </configuration>
             </plugin>
         </plugins>
