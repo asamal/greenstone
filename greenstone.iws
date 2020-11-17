@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="10" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
@@ -24,7 +27,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ca1577fb-2c0f-4ad7-8767-dc3841cd695f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/greenstone.iml" beforeDir="false" afterPath="$PROJECT_DIR$/greenstone.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/greenstone.iws" beforeDir="false" afterPath="$PROJECT_DIR$/greenstone.iws" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -354,6 +356,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Tree Service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tree Service" />
   </component>
   <component name="VssConfiguration">
     <CheckoutOptions>
