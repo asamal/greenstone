@@ -103,6 +103,11 @@
             <artifactId>js-cookie</artifactId>
             <version>2.1.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.sgoertzen</groupId>
+            <artifactId>sonar-break-maven-plugin</artifactId>
+            <version>1.2.5</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -137,6 +142,14 @@
                     <image>
                         <name>docker.io/sanek555/${project.artifactId}:v1</name>
                     </image>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.github.sgoertzen</groupId>
+                <artifactId>sonar-break-maven-plugin</artifactId>
+                <version>1.2.5</version>
+                <configuration>
+                    <sonarServer>https://sonarcloud.io</sonarServer>
                 </configuration>
             </plugin>
         </plugins>
