@@ -26,7 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca1577fb-2c0f-4ad7-8767-dc3841cd695f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/greenstone.iml" beforeDir="false" afterPath="$PROJECT_DIR$/greenstone.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -335,7 +335,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -347,12 +359,12 @@
             <list>
               <RecentGroup>
                 <option name="FILTER_VALUES">
-                  <option value="GS-7" />
+                  <option value="HEAD" />
                 </option>
               </RecentGroup>
               <RecentGroup>
                 <option name="FILTER_VALUES">
-                  <option value="HEAD" />
+                  <option value="GS-7" />
                 </option>
               </RecentGroup>
             </list>
@@ -364,7 +376,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Tree Service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tree Service" />
+    <MESSAGE value="Idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="Idea" />
   </component>
   <component name="VssConfiguration">
     <CheckoutOptions>
@@ -419,17 +432,29 @@
     <webview flattenPackages="false" showMembers="false" autoscrollToSource="false" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1605639031607">
+    <state x="278" y="25" key="CommitChangelistDialog2" timestamp="1605641087061">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1605639031607" />
+    <state x="278" y="25" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1605641087061" />
+    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1605641278362">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1605641278362" />
     <state x="144" y="79" key="MergeDialog" timestamp="1605639106515">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="144" y="79" key="MergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1605639106515" />
-    <state x="357" y="218" key="MultipleFileMergeDialog" timestamp="1605639108657">
+    <state x="357" y="218" key="MultipleFileMergeDialog" timestamp="1605641026058">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="357" y="218" key="MultipleFileMergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1605639108657" />
+    <state x="357" y="218" key="MultipleFileMergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1605641026058" />
+    <state x="467" y="173" key="VCS.ChangeListViewerDialog" timestamp="1605640984567">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="467" y="173" key="VCS.ChangeListViewerDialog/0.0.1440.900@0.0.1440.900" timestamp="1605640984567" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1605641105615">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1605641105615" />
   </component>
 </project>
