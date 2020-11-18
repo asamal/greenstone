@@ -54,7 +54,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .bodyToMono(List.class)
                     .block();
 
-            if (orgs.stream().anyMatch(org -> "spring-projects".equals(org.get("login")))) {
+            if (orgs.isEmpty() || orgs.stream().anyMatch(org -> "spring-projects".equals(org.get("login")))) {
                 return user;
             }
 
