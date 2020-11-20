@@ -12,6 +12,16 @@ spring:
           google:
             client-id: 302799538738-gcqp2diq53pstj08vdg0tn1mc1moh2gf.apps.googleusercontent.com
             client-secret: XIY9Nw3ahDtlv6DWUKBbWZDe
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+        use_sql_comments: true
+        generate_statistics: false
+        jdbc:
+          batch_size: 50
+          fetch_size: 50
 #logging:
 #  level:
 #    org.springframework.security: DEBUG
