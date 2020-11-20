@@ -72,7 +72,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: sanek555/greenstone:latest
+          tags: sanek555/gscore:latest
           file: ./modules/core/docker/Dockerfile # Path to the file relatively to the root directory
           context: ./modules/core # Directory in which you would run 'docker build' command, . stands for root
 
