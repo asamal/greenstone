@@ -9,5 +9,5 @@ for MODULE in $(ls modules); do
     WORKFLOW=$(echo "${WORKFLOW_TEMPLATE}" | sed "s/{{MODULE}}/${MODULE}/g")
 
     # save workflow to .github/workflows/{ROUTE}
-    echo "${WORKFLOW}" > .github/workflows/${MODULE}.yaml
+    echo "${WORKFLOW}" > .github/workflows/${MODULE}.yml
 done
