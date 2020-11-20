@@ -1,20 +1,20 @@
 # This workflow will build a Java project with Maven
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: Java CI with Maven ({{module}})
+name: Java CI with Maven ({{MODULE}})
 
 on:
   push:
     branches:
       - master
     paths:
-      - "modules/{{module}}/**"
-      - ".github/workflows/{{module}}.yml"
+      - "modules/{{MODULE}}/**"
+      - ".github/workflows/{{MODULE}}.yml"
   pull_request:
     types: [ opened, synchronize, reopened ]
 defaults:
   run:
-    working-directory: ./modules/{{module}}
+    working-directory: ./modules/{{MODULE}}
 jobs:
   build:
     name: Build
