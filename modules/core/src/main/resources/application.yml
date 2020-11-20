@@ -15,8 +15,8 @@ spring:
   jpa:
     properties:
       hibernate:
+        show_sql: false
         format_sql: true
-        show_sql: true
         use_sql_comments: true
         generate_statistics: false
         order_inserts: true
