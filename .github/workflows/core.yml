@@ -5,12 +5,16 @@ name: Java CI with Maven
 
 on:
   push:
-    branches-ignore:
-      - "**"
-#    branches:
-#      - master
+    branches:
+      - master
+    paths:
+      - "modules/core/**"
+      - ".github/workflows/core.yml"
   pull_request:
     types: [ opened, synchronize, reopened ]
+defaults:
+  run:
+    working-directory: ./modules/core
 jobs:
   build:
     name: Build

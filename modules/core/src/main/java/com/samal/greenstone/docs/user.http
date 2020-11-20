@@ -1,0 +1,1 @@
+curl -i -H "Content-Type:application/json" -d '{"name": "Frodo", "email": "frodo@gmail.com"}' http://localhost:8080/users
