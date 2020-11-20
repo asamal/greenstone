@@ -73,8 +73,8 @@ jobs:
         with:
           push: true
           tags: sanek555/greenstone:latest
-          file: ./docker/Dockerfile # Path to the file relatively to the root directory
-          context: . # Directory in which you would run 'docker build' command, . stands for root
+          file: ./modules/{{MODULE}}/docker/Dockerfile # Path to the file relatively to the root directory
+          context: ./modules/{{MODULE}} # Directory in which you would run 'docker build' command, . stands for root
 
       - name: Image digest
         if: github.ref == 'refs/heads/master'
