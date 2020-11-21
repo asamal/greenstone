@@ -15,7 +15,7 @@
     <description>Green Stone project for Spring Boot</description>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>14</java.version>
         <sonar.projectKey>greenstone</sonar.projectKey>
         <sonar.projectName>GreenStone (core)</sonar.projectName>
         <sonar.organization>asamal</sonar.organization>
