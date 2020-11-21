@@ -54,7 +54,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
-          projectBaseDir: ./modules/gateway
+          projectBaseDir: modules/gateway
           args: >
             -Dsonar.organization=asamal
             -Dsonar.projectKey=gs-gateway
