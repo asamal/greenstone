@@ -58,7 +58,7 @@ jobs:
           args: >
             -Dsonar.organization=asamal
             -Dsonar.projectKey=gs-gateway
-            -Dsonar.projectName="GreenStone (gateway)"
+            '-Dsonar.projectName=GreenStone (gateway)'
             -Dsonar.java.binaries=build/classes
 
       - name: Set up QEMU
