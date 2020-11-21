@@ -1,6 +1,6 @@
-package com.samal.greenstone.dao;
+package com.samal.greenstone.core.dao;
 
-import com.samal.greenstone.domain.User;
+import com.samal.greenstone.core.domain.User;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

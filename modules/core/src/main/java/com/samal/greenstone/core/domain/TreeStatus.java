@@ -1,4 +1,4 @@
-package com.samal.greenstone.domain;
+package com.samal.greenstone.core.domain;
 
 public enum TreeStatus {
     SUBMITTED,

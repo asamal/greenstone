@@ -1,7 +1,7 @@
-package com.samal.greenstone.service;
+package com.samal.greenstone.core.service;
 
-import com.samal.greenstone.dao.TreeRepository;
-import com.samal.greenstone.domain.Tree;
+import com.samal.greenstone.core.dao.TreeRepository;
+import com.samal.greenstone.core.domain.Tree;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

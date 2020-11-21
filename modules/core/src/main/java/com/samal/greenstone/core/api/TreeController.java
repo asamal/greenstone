@@ -1,7 +1,7 @@
-package com.samal.greenstone.api;
+package com.samal.greenstone.core.api;
 
-import com.samal.greenstone.domain.Tree;
-import com.samal.greenstone.service.TreeService;
+import com.samal.greenstone.core.domain.Tree;
+import com.samal.greenstone.core.service.TreeService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
