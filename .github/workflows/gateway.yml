@@ -53,9 +53,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        args: >
-          -Dsonar.organization=asamal
-          -Dsonar.projectKey=gs-gateway
+        with:
+          args: >
+            -Dsonar.organization=asamal
+            -Dsonar.projectKey=gs-gateway
 
       - name: Set up QEMU
         if: github.ref == 'refs/heads/master'
