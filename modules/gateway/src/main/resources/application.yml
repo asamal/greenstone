@@ -2,5 +2,5 @@ opentracing:
   jaeger:
     service-name: gateway
     enabled: true
-    udp-sender:
-      host: jaeger-agent-host
+#    udp-sender:
+#      host: jaeger-agent-host

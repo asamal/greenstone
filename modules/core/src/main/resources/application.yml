@@ -28,8 +28,8 @@ opentracing:
   jaeger:
     service-name: core
     enabled: true
-    udp-sender:
-      host: jaeger-agent-host
+#    udp-sender:
+#      host: jaeger-agent-host
 #logging:
 #  level:
 #    org.springframework.security: DEBUG
