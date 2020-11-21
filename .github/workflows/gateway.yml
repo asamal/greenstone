@@ -53,12 +53,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_PROJECT_NAME: GreenStone (gateway)
         with:
           projectBaseDir: modules/gateway
           args: >
             -Dsonar.organization=asamal
             -Dsonar.projectKey=gs-gateway
-            '-Dsonar.projectName=GreenStone (gateway)'
+            -Dsonar.projectName=${SONAR_PROJECT_NAME}
             -Dsonar.java.binaries=build/classes
 
       - name: Set up QEMU
