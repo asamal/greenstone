@@ -3,4 +3,13 @@ services:
   core:
     image: sanek555/gscore:latest
     ports:
-      - "8080:8080"
+      - "8082:8080"
+  gateway:
+    image: sanek555/gsgateway:latest
+    ports:
+      - "8081:8080"
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    ports:
+      - "6831:6831/udp"
+      - "16686:16686"
