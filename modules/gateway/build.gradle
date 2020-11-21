@@ -25,7 +25,7 @@ ext {
 }
 
 dependencies {
-	compile group: 'io.opentracing.contrib', name: 'opentracing-spring-jaeger-web-starter'
+	compile group: 'io.opentracing.contrib', name: 'opentracing-spring-jaeger-web-starter', version: '3.2.2'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
