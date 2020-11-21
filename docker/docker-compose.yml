@@ -1,6 +1,6 @@
 version: "3.8"
 services:
-  gscore:
+  core:
     image: sanek555/gscore:latest
     ports:
       - "8080:8080"

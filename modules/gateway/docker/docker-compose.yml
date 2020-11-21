@@ -1,6 +1,0 @@
-version: "3.8"
-services:
-  greenstone:
-    image: sanek555/greenstone:latest
-    ports:
-      - "8080:8080"
