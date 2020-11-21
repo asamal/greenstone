@@ -1,6 +1,6 @@
-package com.samal.greenstone.service;
+package com.samal.greenstone.core.service;
 
-import com.samal.greenstone.domain.Tree;
+import com.samal.greenstone.core.domain.Tree;
 
 import java.util.Optional;
 

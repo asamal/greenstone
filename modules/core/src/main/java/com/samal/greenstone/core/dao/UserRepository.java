@@ -1,6 +1,6 @@
-package com.samal.greenstone.dao;
+package com.samal.greenstone.core.dao;
 
-import com.samal.greenstone.domain.User;
+import com.samal.greenstone.core.domain.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 

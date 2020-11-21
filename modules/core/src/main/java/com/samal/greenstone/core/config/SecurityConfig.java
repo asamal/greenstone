@@ -1,4 +1,4 @@
-package com.samal.greenstone.config;
+package com.samal.greenstone.core.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.samal</groupId>
-    <artifactId>greenstone</artifactId>
+    <artifactId>core</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>GreenStone</name>
     <description>Green Stone project for Spring Boot</description>

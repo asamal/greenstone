@@ -1,22 +1,22 @@
-package com.samal.greenstone.domain;
+package com.samal.greenstone.core.domain;
 
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.UUID;
 
 @Entity
 @NoArgsConstructor
-public class Note {
+@Getter
+public class Tree {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @ManyToOne
-    private Tree tree;
-    private Operation operation;
-    @OneToOne
-    private Snapshot snapshot;
+    private UUID uuid;
+    private String desc;
     @OneToMany
-    private Collection<NodeEvent> nodeEvents = new HashSet<>();
+    private Collection<Note> notes = new HashSet<>();
 }
