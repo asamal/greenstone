@@ -17,7 +17,7 @@
     <properties>
         <java.version>11</java.version>
         <sonar.projectKey>greenstone</sonar.projectKey>
-        <sonar.projectName>GreenStone</sonar.projectName>
+        <sonar.projectName>GreenStone (core)</sonar.projectName>
         <sonar.organization>asamal</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
