@@ -1,6 +1,7 @@
-![CI (core)](https://github.com/asamal/greenstone/workflows/Java%20CI%20with%20Maven%20(core)/badge.svg)
-[![Sonar QG (core)](https://sonarcloud.io/api/project_badges/measure?project=greenstone&metric=alert_status)](https://sonarcloud.io/dashboard?id=greenstone)  
-![CI (gateway)](https://github.com/asamal/greenstone/workflows/Java%20CI%20with%20Maven%20(gateway)/badge.svg)
+![CI (core)](https://github.com/asamal/greenstone/workflows/CI%20(core)/badge.svg)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=greenstone&metric=alert_status)](https://sonarcloud.io/dashboard?id=greenstone)  
+![CI (gateway)](https://github.com/asamal/greenstone/workflows/CI%20(gateway)/badge.svg)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=gs-gateway&metric=alert_status)](https://sonarcloud.io/dashboard?id=gs-gateway)  
 
 # GreenStone
 
