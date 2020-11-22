@@ -30,8 +30,9 @@ opentracing:
   jaeger:
     service-name: core
     enabled: true
-    udp-sender:
-      host: ${JAEGER_HOST}
+    http-sender:
+      #url: http://localhost:14268/api/traces
+      url: http://${JAEGER_HOST}:14268/api/traces
 logging:
   level:
     io.opentracing: debug
