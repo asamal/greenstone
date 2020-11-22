@@ -1,6 +1,10 @@
+spring:
+  application:
+    name: gateway
 opentracing:
   jaeger:
     service-name: gateway
     enabled: true
-#    udp-sender:
-#      host: jaeger-agent-host
+    http-sender:
+      #url: http://localhost:14268/api/traces
+      url: http://${JAEGER_HOST}:14268/api/traces

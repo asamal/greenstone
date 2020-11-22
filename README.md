@@ -8,11 +8,14 @@
 ## Build docker container 
 
 Run from root directory:  
-`docker build -t greenstone:v1 . -f docker/Dockerfile`
+Build jars:  
+`./build-modules.sh`  
+Start docker-compose:   
+`docker-compose -f docker/dc-local.yml up -d --force-recreate`  
 
 ## Naming convention 
 
 List of names:  
 `greenstone` - internal name used in the code  
-`GreenStone` - user friendly name  
+`GreenStone` - user-friendly name  
 `green-stone` - deprecated, used only when it is imossible to change  
