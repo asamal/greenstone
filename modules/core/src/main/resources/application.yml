@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: core
   output:
     ansi:
       enabled: ALWAYS
@@ -28,8 +30,9 @@ opentracing:
   jaeger:
     service-name: core
     enabled: true
-#    udp-sender:
-#      host: jaeger-agent-host
-#logging:
-#  level:
-#    org.springframework.security: DEBUG
+    udp-sender:
+      host: ${JAEGER_HOST}
+logging:
+  level:
+    io.opentracing: debug
+    org.springframework.security: warn

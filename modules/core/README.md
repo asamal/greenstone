@@ -9,7 +9,7 @@ Run from root directory:
 Build jars:  
 `./build-modules.sh`  
 Start docker-compose:   
-`docker-compose -f docker/dc-local.yml up -d`  
+`docker-compose -f docker/dc-local.yml up -d --force-recreate`  
 
 ## Naming convention 
 
