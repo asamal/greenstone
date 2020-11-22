@@ -8,7 +8,10 @@
 ## Build docker container 
 
 Run from root directory:  
-`docker build -t greenstone:v1 . -f docker/Dockerfile`
+Build jars:  
+`./build-modules.sh`  
+Start docker-compose:   
+`docker-compose -f docker/dc-local.yml up -d --force-recreate`  
 
 ## Naming convention 
 
