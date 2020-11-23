@@ -28,12 +28,25 @@ spring:
           fetch_size: 50
 opentracing:
   jaeger:
-    service-name: core
+    log-spans: true
     enabled: true
+#    udp-sender:
+#      host: ${JAEGER_UDP_HOST:localhost}
+#      port: 6831
+#opentracing:
+#  jaeger:
+#    service-name: core
+#    enabled: true
+##    udp-sender:
+##      host: jaeger
+##      port: 6831
     http-sender:
-      #url: http://localhost:14268/api/traces
-      url: http://${JAEGER_HOST}:14268/api/traces
+      url: http://${JAEGER_UDP_HOST:localhost}:14268/api/traces
+#      #url: http://localhost:14268/api/traces
 logging:
   level:
-    io.opentracing: debug
-    org.springframework.security: warn
+    io.opentracing: TRACE
+    org.springframework.security: WARN
+    root: WARN
+    io.jaegertracing: TRACE
+    com.samal.greenstone: INFO
