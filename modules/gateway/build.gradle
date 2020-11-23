@@ -27,18 +27,25 @@ ext {
 dependencies {
 	compile group: 'io.opentracing.contrib', name: 'opentracing-spring-jaeger-web-starter', version: '3.2.2'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
-	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
-	implementation 'org.springframework.boot:spring-boot-starter-security'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.cloud:spring-cloud-starter-gateway'
-	implementation 'org.springframework.cloud:spring-cloud-starter-contract-verifier'
+//	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+//	implementation 'org.springframework.boot:spring-boot-starter-security'
+//	implementation 'org.springframework.boot:spring-boot-starter-web'
+//	implementation 'org.springframework.cloud:spring-cloud-starter-gateway'
+//	implementation 'org.springframework.cloud:spring-cloud-starter-contract-verifier'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'org.springframework.cloud:spring-cloud-contract-wiremock'
-	testImplementation 'org.springframework.security:spring-security-test'
+//	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//	testImplementation 'org.springframework.cloud:spring-cloud-contract-wiremock'
+//	testImplementation 'org.springframework.security:spring-security-test'
+
+	compile("org.springframework.cloud:spring-cloud-starter-gateway")
+//	compile("org.springframework.cloud:spring-cloud-starter-netflix-hystrix")
+	compile("org.springframework.cloud:spring-cloud-starter-contract-stub-runner"){
+		exclude group: "org.springframework.boot", module: "spring-boot-starter-web"
+	}
+	testCompile("org.springframework.boot:spring-boot-starter-test")
 }
 
 dependencyManagement {

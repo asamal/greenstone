@@ -1,6 +1,7 @@
 spring:
   application:
     name: gateway
+core-url: ${CORE_URL:"http://localhost:8082"}
 opentracing:
   jaeger:
     enabled: true
@@ -19,4 +20,15 @@ opentracing:
 #    http-sender:
 #      #url: http://localhost:14268/api/traces
 #      url: http://${JAEGER_HOST}:14268/api/traces
+
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.http.server.reactive: TRACE
+    org.springframework.web.reactive: TRACE
+    org.springframework.boot.autoconfigure.web: TRACE
+    reactor.netty: TRACE
+    redisratelimiter: TRACE
+
+
 
