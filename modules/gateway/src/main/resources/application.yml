@@ -3,8 +3,20 @@ spring:
     name: gateway
 opentracing:
   jaeger:
-    service-name: gateway
     enabled: true
+#    udp-sender:
+#      host: ${JAEGER_UDP_HOST:localhost}
+#      port: 6831
+#opentracing:
+#  jaeger:
+#    service-name: gateway
+#    enabled: true
+##    udp-sender:
+##      host: jaeger
+##      port: 6831
     http-sender:
-      #url: http://localhost:14268/api/traces
-      url: http://${JAEGER_HOST}:14268/api/traces
+      url: http://${JAEGER_UDP_HOST:localhost}:14268/api/traces
+#    http-sender:
+#      #url: http://localhost:14268/api/traces
+#      url: http://${JAEGER_HOST}:14268/api/traces
+
