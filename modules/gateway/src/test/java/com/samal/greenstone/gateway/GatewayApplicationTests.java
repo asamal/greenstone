@@ -35,7 +35,7 @@ class GatewayApplicationTests {
 				webClient
 				.get().uri("/get")
 				.exchange()
-				.expectStatus().isNotFound();
+				.expectStatus().isUnauthorized();
 
 //		webClient
 //				.get().uri("/get")
