@@ -27,10 +27,14 @@ class GatewayApplicationTests {
 				.willReturn(aResponse()
 						.withBody("{\"headers\":{\"Hello\":\"World\"}}")
 						.withHeader("Content-Type", "application/json")));
-		stubFor(get(urlEqualTo("/delay/3"))
-				.willReturn(aResponse()
-						.withBody("no fallback")
-						.withFixedDelay(3000)));
+		stubFor(get(urlEqualTo("/customers"))
+                .willReturn(aResponse()
+                        .withBody("{\"headers\":{\"Hello\":\"World\"}}")
+                        .withHeader("Content-Type", "application/json")));
+        stubFor(get(urlEqualTo("/delay/3"))
+                .willReturn(aResponse()
+                        .withBody("no fallback")
+                        .withFixedDelay(3000)));
 
 				webClient
 				.get().uri("/get")
@@ -43,6 +47,13 @@ class GatewayApplicationTests {
 //				.expectStatus().isOk()
 //				.expectBody()
 //				.jsonPath("$.headers.Hello").isEqualTo("World");
+
+        webClient
+                .get().uri("/customers")
+                .exchange()
+                .expectStatus().isOk()
+                .expectBody()
+                .jsonPath("$.headers.Hello").isEqualTo("World");
 
 //		webClient
 //				.get().uri("/delay/3")

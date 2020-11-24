@@ -36,6 +36,10 @@ public class GatewayApplication extends WebSecurityConfigurerAdapter {
                         .path("/**")
                         .filters(f -> f.addRequestHeader("Hello", "World"))
                         .uri("http://localhost:8082"))
+                .route(p -> p
+                        .path("/**")
+                        .filters(f -> f.addRequestHeader("Hello", "World"))
+                        .uri(httpUri))
 
                 .build();
     }
