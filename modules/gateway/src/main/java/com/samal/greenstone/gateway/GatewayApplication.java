@@ -61,7 +61,7 @@ public class GatewayApplication /*extends WebSecurityConfigurerAdapter*/  {
         return ServerCodecConfigurer.create();
     }
 
-//    @Bean
+    @Bean
     public RouteLocator myRoutes(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route(p -> p
