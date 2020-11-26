@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import reactor.core.publisher.Mono;
 
 import javax.servlet.http.HttpServletRequest;
@@ -26,7 +28,7 @@ import java.util.Map;
 @EnableConfigurationProperties(UriConfiguration.class)
 @SpringBootApplication
 @RestController
-public class GatewayApplication /*extends WebSecurityConfigurerAdapter*/ {
+public class GatewayApplication /*extends WebSecurityConfigurerAdapter*/  {
 
     public static void main(String[] args) {
         SpringApplication.run(GatewayApplication.class, args);
@@ -36,6 +38,15 @@ public class GatewayApplication /*extends WebSecurityConfigurerAdapter*/ {
     public Map<String, Object> user(@AuthenticationPrincipal OAuth2User principal) {
         return Collections.singletonMap("name", principal.getAttribute("name"));
     }
+
+
+//    @Override
+//    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+//            registry.addResourceHandler("/webjars/**")
+//                    .addResourceLocations("/webjars/")
+//                    .resourceChain(false);
+//            registry.setOrder(1);
+//    }
 
     @GetMapping("/error")
     @ResponseBody
@@ -50,11 +61,11 @@ public class GatewayApplication /*extends WebSecurityConfigurerAdapter*/ {
         return ServerCodecConfigurer.create();
     }
 
-    @Bean
+//    @Bean
     public RouteLocator myRoutes(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route(p -> p
-                        .path("/customers/**")
+                        .path("/customers")
                         .filters(f -> f.addRequestHeader("Hello", "World"))
                         .uri("http://localhost:8082"))
 
