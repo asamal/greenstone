@@ -16,6 +16,15 @@ spring:
           google:
             client-id: 302799538738-gcqp2diq53pstj08vdg0tn1mc1moh2gf.apps.googleusercontent.com
             client-secret: XIY9Nw3ahDtlv6DWUKBbWZDe
+
+
+  cloud:
+    gateway:
+      httpserver:
+        wiretap: true
+      httpclient:
+        wiretap: true
+
 opentracing:
   jaeger:
     enabled: true
@@ -37,8 +46,16 @@ opentracing:
 logging:
   level:
     io.opentracing: TRACE
-    org.springframework.security: WARN
-    root: WARN
-    io.jaegertracing: TRACE
-    com.samal.greenstone: INFO
+    org.springframework.security: DEBUG
+    root: DEBUG
+    io.jaegertracing: DEBUG
+    com.samal.greenstone: DEBUG
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    org.springframework.boot.autoconfigure.web: DEBUG
+    reactor.netty: DEBUG
+    redisratelimiter: DEBUG
+
+
 

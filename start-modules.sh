@@ -1,1 +1,1 @@
-docker-compose -f docker/dc-local.yml up --build --force-recreate --no-deps
+docker-compose -f docker/dc-local.yml up --force-recreate --no-deps
