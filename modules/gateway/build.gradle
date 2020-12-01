@@ -39,7 +39,6 @@ dependencies {
 	compile group: 'io.opentracing.contrib', name: 'opentracing-spring-cloud-gateway-starter', version: '0.5.9'
 	compile group: 'io.opentracing.contrib', name: 'opentracing-spring-jaeger-web-starter', version: '3.2.2'
 
-//	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.cloud:spring-cloud-starter-contract-verifier'
 
