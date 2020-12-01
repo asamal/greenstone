@@ -1,19 +1,21 @@
+server:
+  port: 8082
 spring:
   application:
     name: core
   output:
     ansi:
       enabled: ALWAYS
-  security:
-    oauth2:
-      client:
-        registration:
-          github:
-            clientId: 49d2f6faed284d742b47
-            clientSecret: 0080e414065d4ae5f2e33adad53aaff54a3ce992
-          google:
-            client-id: 302799538738-gcqp2diq53pstj08vdg0tn1mc1moh2gf.apps.googleusercontent.com
-            client-secret: XIY9Nw3ahDtlv6DWUKBbWZDe
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          github:
+#            clientId: 49d2f6faed284d742b47
+#            clientSecret: 0080e414065d4ae5f2e33adad53aaff54a3ce992
+#          google:
+#            client-id: 302799538738-gcqp2diq53pstj08vdg0tn1mc1moh2gf.apps.googleusercontent.com
+#            client-secret: XIY9Nw3ahDtlv6DWUKBbWZDe
   jpa:
     properties:
       hibernate:
@@ -46,7 +48,7 @@ opentracing:
 logging:
   level:
     io.opentracing: TRACE
-    org.springframework.security: WARN
+#    org.springframework.security: WARN
     root: WARN
     io.jaegertracing: TRACE
     com.samal.greenstone: INFO
