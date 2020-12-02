@@ -65,6 +65,7 @@ public class GatewayApplication {
         return http.authorizeExchange()
                 .pathMatchers("/", "/error", "/webjars/**").permitAll()
                 .pathMatchers("/customers", "/customers/**").permitAll()
+                .anyExchange().authenticated()
                 .and().csrf().csrfTokenRepository(CookieServerCsrfTokenRepository.withHttpOnlyFalse())
                 .and().logout()
                 .and().oauth2Login().and().build();
