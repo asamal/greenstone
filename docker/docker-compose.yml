@@ -34,6 +34,7 @@ services:
       - JAEGER_UDP_HOST=jaeger
       #      - JAEGER_UDP_PORT=6831
       - JAEGER_SAMPLER_MANAGER_HOST_PORT=jaeger:5778
+      - CORE_URL_HOST=core
     networks:
       - jaeger-example
     depends_on:

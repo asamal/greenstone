@@ -26,7 +26,7 @@ spring:
         wiretap: true
       httpclient:
         wiretap: true
-
+core-url: http://${CORE_URL_HOST:localhost}:8082
 opentracing:
   jaeger:
     enabled: true
