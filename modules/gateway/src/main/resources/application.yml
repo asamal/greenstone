@@ -17,7 +17,7 @@ spring:
             client-id: 302799538738-gcqp2diq53pstj08vdg0tn1mc1moh2gf.apps.googleusercontent.com
             client-secret: XIY9Nw3ahDtlv6DWUKBbWZDe
   main:
-#    web-application-type: reactive
+    #    web-application-type: reactive
     allow-bean-definition-overriding: true
 
   cloud:
@@ -26,21 +26,23 @@ spring:
         wiretap: true
       httpclient:
         wiretap: true
-core-url: http://${CORE_URL_HOST:localhost}:8082
+core-url:
+  host: ${CORE_URL_HOST:localhost}
+  port: ${CORE_URL_PORT:8082}
 opentracing:
   jaeger:
     enabled: true
-#    enable-b3-propagation: true
+    #    enable-b3-propagation: true
     #    udp-sender:
-#      host: ${JAEGER_UDP_HOST:localhost}
-#      port: 6831
-#opentracing:
-#  jaeger:
-#    service-name: gateway
-#    enabled: true
-##    udp-sender:
-##      host: jaeger
-##      port: 6831
+    #      host: ${JAEGER_UDP_HOST:localhost}
+    #      port: 6831
+    #opentracing:
+    #  jaeger:
+    #    service-name: gateway
+    #    enabled: true
+    ##    udp-sender:
+    ##      host: jaeger
+    ##      port: 6831
     http-sender:
       url: http://${JAEGER_UDP_HOST:localhost}:14268/api/traces
   spring:

@@ -1,6 +1,6 @@
 package com.samal.greenstone.gateway;
 
-import com.samal.greenstone.gateway.config.UriConfiguration;
+import com.samal.greenstone.gateway.config.CoreUrlConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -23,7 +23,7 @@ import java.util.Collections;
 import java.util.Map;
 
 @EnableWebSecurity
-@EnableConfigurationProperties(UriConfiguration.class)
+@EnableConfigurationProperties(CoreUrlConfiguration.class)
 @SpringBootApplication
 @RestController
 public class GatewayApplication {
@@ -45,12 +45,12 @@ public class GatewayApplication {
 
 
     @Bean
-    public RouteLocator myRoutes(RouteLocatorBuilder builder, UriConfiguration uriConfiguration) {
+    public RouteLocator myRoutes(RouteLocatorBuilder builder, CoreUrlConfiguration coreUrlConfiguration) {
         return builder.routes()
                 .route(p -> p
                         .path("/customers/**")
                         .filters(f -> f.addRequestHeader("Hello", "World"))
-                        .uri(uriConfiguration.getCoreUrl()))
+                        .uri(coreUrlConfiguration.getCoreUrl()))
                 .build();
     }
 
@@ -64,7 +64,7 @@ public class GatewayApplication {
 
         return http.authorizeExchange()
                 .pathMatchers("/", "/error", "/webjars/**").permitAll()
-                .pathMatchers("/customers", "/customers/**").authenticated()
+                .pathMatchers("/customers", "/customers/**").permitAll()
                 .anyExchange().authenticated()
                 .and().csrf().csrfTokenRepository(CookieServerCsrfTokenRepository.withHttpOnlyFalse())
                 .and().logout()
