@@ -10,7 +10,7 @@ import javax.validation.constraints.NotEmpty;
 public class UriConfiguration {
 
     @NotEmpty
-    private String coreUrl;// = "http://localhost:8082";
+    private String coreUrl;
 
     public String getCoreUrl() {
         return coreUrl;
