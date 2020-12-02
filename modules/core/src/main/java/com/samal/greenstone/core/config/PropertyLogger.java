@@ -21,7 +21,7 @@ public class PropertyLogger  {
     @EventListener
     public void handleContextRefresh(ContextRefreshedEvent event) {
         final Environment env = event.getApplicationContext().getEnvironment();
-        LOGGER.info("====== Environment and configuration ======");
+        LOGGER.info("====== Environment and configuration ======#");
         LOGGER.info("Active profiles: {}", Arrays.toString(env.getActiveProfiles()));
         final MutablePropertySources sources = ((AbstractEnvironment) env).getPropertySources();
         StreamSupport.stream(sources.spliterator(), false)

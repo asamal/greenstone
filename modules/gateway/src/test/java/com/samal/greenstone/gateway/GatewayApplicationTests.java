@@ -20,7 +20,7 @@ class GatewayApplicationTests {
     private WebTestClient webClient;
 
     @Test
-    public void contextLoads() throws Exception {
+    public void contextLoads() {
 
         stubFor(get(urlEqualTo("/customers"))
                 .willReturn(aResponse()
