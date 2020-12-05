@@ -54,10 +54,10 @@ public class GatewayApplication {
                 .build();
     }
 
-    @RequestMapping("/fallback")
-    public Mono<String> fallback() {
-        return Mono.just("fallback");
-    }
+//    @RequestMapping("/fallback")
+//    public Mono<String> fallback() {
+//        return Mono.just("fallback");
+//    }
 
     @Bean
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) {
