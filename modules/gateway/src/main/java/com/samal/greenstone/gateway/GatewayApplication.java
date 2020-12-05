@@ -15,7 +15,6 @@ import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.security.web.server.SecurityWebFilterChain;
 import org.springframework.security.web.server.csrf.CookieServerCsrfTokenRepository;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
 
@@ -40,7 +39,7 @@ public class GatewayApplication {
 
     @GetMapping("/error")
     public Mono<String> error(ServerHttpRequest request) {
-        return Mono.empty();
+        return Mono.just("E-R-R-O-R");
     }
 
 
@@ -54,10 +53,6 @@ public class GatewayApplication {
                 .build();
     }
 
-    @RequestMapping("/fallback")
-    public Mono<String> fallback() {
-        return Mono.just("fallback");
-    }
 
     @Bean
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) {
