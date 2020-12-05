@@ -2,7 +2,9 @@ package com.samal.greenstone.core.api;
 
 import com.samal.greenstone.core.domain.Tree;
 import com.samal.greenstone.core.service.TreeService;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -45,20 +47,17 @@ public class TreeController {
     }
 
     protected TreeDto convertToDto(Tree entity) {
-        TreeDto dto = new TreeDto(entity.getId(), entity.getDesc());
-        return dto;
+        return new TreeDto(entity.getId(), entity.getDesc());
     }
 
     protected Tree convertToEntity(TreeDto dto) {
-        Tree tree = new Tree(dto.getId(), dto.getDesc());
-        return tree;
+        return new Tree(dto.getId(), dto.getDesc());
     }
 
     @AllArgsConstructor
     @Getter
     @Setter
     public static class TreeDto {
-
         private long id;
         @NotEmpty
         private String desc;

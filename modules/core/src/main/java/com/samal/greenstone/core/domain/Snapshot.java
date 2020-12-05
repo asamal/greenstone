@@ -14,7 +14,6 @@ public class Snapshot {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private TreeType type;
-    // private Location location;
     private Double size;
     private TreeStatus status;
 }
