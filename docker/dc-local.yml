@@ -17,7 +17,7 @@ services:
       dockerfile: docker/Dockerfile
       context: ../modules/core
     ports:
-      - "8082:8082"
+      - "44402:8080"
     environment:
 #      - JAEGER_SERVICE_NAME=core
       - JAEGER_UDP_HOST=jaeger
@@ -32,12 +32,13 @@ services:
       dockerfile: docker/Dockerfile
       context: ../modules/gateway
     ports:
-      - "8081:8081"
+      - "44401:8080"
     environment:
 #      - JAEGER_SERVICE_NAME=gateway
       - JAEGER_UDP_HOST=jaeger
 #      - JAEGER_UDP_PORT=6831
       - JAEGER_SAMPLER_MANAGER_HOST_PORT=jaeger:5778
+      - CORE_URL_HOST=core
     networks:
       - jaeger-example
     depends_on:
