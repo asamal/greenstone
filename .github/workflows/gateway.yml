@@ -12,6 +12,9 @@ on:
       - ".github/workflows/gateway.yml"
   pull_request:
     types: [ opened, synchronize, reopened ]
+    paths:
+      - "modules/gateway/**"
+      - ".github/workflows/gateway.yml"
 defaults:
   run:
     working-directory: ./modules/gateway
