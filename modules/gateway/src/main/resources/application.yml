@@ -28,7 +28,7 @@ spring:
         wiretap: true
 core-url:
   host: ${CORE_URL_HOST:localhost}
-  port: ${CORE_URL_PORT:44402}
+  port: ${CORE_URL_PORT:8080}
 opentracing:
   jaeger:
     enabled: true
