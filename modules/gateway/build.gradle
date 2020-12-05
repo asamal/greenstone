@@ -78,3 +78,11 @@ test {
 jacocoTestReport {
 	dependsOn test // tests are required to run before generating the report
 }
+
+jacocoTestReport {
+	reports {
+		xml.enabled true
+        csv.enabled false
+        html.destination file("${buildDir}/jacocoHtml")
+	}
+}
