@@ -11,6 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class DemoMetrics {
     private final Counter demoCounter;
     private final AtomicInteger demoGauge;
+    private final Random random = new Random();
 
     public DemoMetrics(MeterRegistry meterRegistry) {
         this.demoCounter = meterRegistry.counter("demo_counter");
@@ -26,7 +27,6 @@ public class DemoMetrics {
         if (min >= max) {
             throw new IllegalArgumentException("max must be greater than min");
         }
-        Random random = new Random();
         return random.nextInt((max - min) + 1) + min;
     }
 }
