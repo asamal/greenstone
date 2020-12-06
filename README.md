@@ -1,19 +1,29 @@
 ![CI (core)](https://github.com/asamal/greenstone/workflows/CI%20(core)/badge.svg)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=greenstone&metric=alert_status)](https://sonarcloud.io/dashboard?id=greenstone)  
 ![CI (gateway)](https://github.com/asamal/greenstone/workflows/CI%20(gateway)/badge.svg)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=gs-gateway&metric=alert_status)](https://sonarcloud.io/dashboard?id=gs-gateway)  
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=gs-gateway&metric=alert_status)](https://sonarcloud.io/dashboard?id=gs-gateway)
 
 # GreenStone
 
-## Build docker container 
+## Start the application
+
+### Local (build docker images locally)
 
 Run from root directory:  
 Build jars:  
 `./build-modules.sh`  
 Start docker-compose:   
-`docker-compose -f docker/dc-local.yml up -d --force-recreate`  
+`./start-modules-local.sh`
 
-## Naming convention 
+### Remote (pull docker images from the repository)
+
+Run from root directory:  
+Pull images:  
+`./pull-modules.sh`  
+Start docker-compose:   
+`./start-modules-remote.sh`
+
+## Naming convention
 
 List of names:  
 `greenstone` - internal name used in the code  
