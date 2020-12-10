@@ -51,7 +51,8 @@ class TreeControllerTest {
 
         mockMvc.perform(put("/trees")
                 .contentType(MediaType.APPLICATION_JSON_VALUE)
-                .accept(MediaType.APPLICATION_JSON_VALUE).content("{\n" +
+                .accept(MediaType.APPLICATION_JSON_VALUE)
+                .content("{\n" +
                         "  \"id\": 1,\n" +
                         "  \"desc\": \"Desc\"\n" +
                         "}")
