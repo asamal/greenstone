@@ -21,10 +21,23 @@ services:
     environment:
       - JAEGER_UDP_HOST=jaeger
       - JAEGER_SAMPLER_MANAGER_HOST_PORT=jaeger:5778
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/compose-postgres
+      - SPRING_DATASOURCE_USERNAME=compose-postgres
+      - SPRING_DATASOURCE_PASSWORD=compose-postgres
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
     networks:
       - jaeger-example
     depends_on:
       - jaeger
+      - core-db
+  core-db:
+    image: 'postgres:13.1-alpine'
+    container_name: core-db
+    environment:
+      - POSTGRES_USER=compose-postgres
+      - POSTGRES_PASSWORD=compose-postgres
+    networks:
+      - jaeger-example
   gateway:
     build:
       dockerfile: docker/Dockerfile
