@@ -24,6 +24,7 @@ public class Tree {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private UUID uuid;
+    @Column(name = "description")
     private String desc;
     @OneToMany
     private Collection<Note> notes = new HashSet<>();
