@@ -11,7 +11,7 @@ services:
       - "14268:14268"
       - "9411:9411"
     networks:
-      - jaeger-example
+      - greenstone-network
   core:
     build:
       dockerfile: docker/Dockerfile
@@ -21,10 +21,25 @@ services:
     environment:
       - JAEGER_UDP_HOST=jaeger
       - JAEGER_SAMPLER_MANAGER_HOST_PORT=jaeger:5778
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/compose-postgres
+      - SPRING_DATASOURCE_USERNAME=compose-postgres
+      - SPRING_DATASOURCE_PASSWORD=compose-postgres
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=create
     networks:
-      - jaeger-example
+      - greenstone-network
     depends_on:
       - jaeger
+      - db
+  db:
+    image: 'postgres:13.1-alpine'
+    ports:
+      - "5432:5432"
+    container_name: db
+    environment:
+      - POSTGRES_USER=compose-postgres
+      - POSTGRES_PASSWORD=compose-postgres
+    networks:
+      - greenstone-network
   gateway:
     build:
       dockerfile: docker/Dockerfile
@@ -36,7 +51,7 @@ services:
       - JAEGER_SAMPLER_MANAGER_HOST_PORT=jaeger:5778
       - CORE_URL_HOST=core
     networks:
-      - jaeger-example
+      - greenstone-network
     depends_on:
       - jaeger
   prometheus:
@@ -49,7 +64,7 @@ services:
       - ../prometheus:/etc/prometheus
       - prometheus-data:/prometheus
     networks:
-      - jaeger-example
+      - greenstone-network
   graphana:
     image: grafana/grafana:latest
     ports:
@@ -57,9 +72,9 @@ services:
     volumes:
       - grafana-data:/var/lib/grafana
     networks:
-      - jaeger-example
+      - greenstone-network
 networks:
-  jaeger-example:
+  greenstone-network:
 volumes:
   prometheus-data: { }
   grafana-data: { }
