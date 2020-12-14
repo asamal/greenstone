@@ -31,7 +31,7 @@ spring:
           fetch_size: 50
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://db:5432/compose-postgres
+    url: jdbc:postgresql://localhost:5432/compose-postgres
     driver-class-name: org.postgresql.Driver
 #    username: <username>
 #    password: <password>
