@@ -1,1 +1,1 @@
-docker-compose -f docker/dc-remote.yml build --pull --no-cache
+docker-compose -f docker/dc-remote.yml pull
