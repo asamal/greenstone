@@ -17,14 +17,6 @@ public class CoreUrlConfiguration {
     @NotEmpty
     private String port;
 
-    public void setHost(String host) {
-        this.host = host;
-    }
-
-    public void setPort(String port) {
-        this.port = port;
-    }
-
     public String getCoreUrl() {
         return "http://" + host + ":" + port;
     }
