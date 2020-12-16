@@ -33,7 +33,7 @@ class TreeControllerTest {
     void findOne() throws Exception {
         Tree tree = new Tree();
         tree.setId(1L);
-        tree.setDesc("Desc");
+        tree.setDescription("Desc");
         when(treeService.findById(1L)).thenReturn(Optional.of(tree));
 
         mockMvc.perform(get("/trees/1")
@@ -46,16 +46,19 @@ class TreeControllerTest {
 
     @Test
     void create() throws Exception {
-        Tree tree = new Tree(1L, "Desc");
+        Tree tree = new Tree();
+        tree.setId(1L);
+        tree.setDescription("Desc");
         when(treeService.save(any())).thenReturn(tree);
 
         mockMvc.perform(put("/trees")
                 .contentType(MediaType.APPLICATION_JSON_VALUE)
                 .accept(MediaType.APPLICATION_JSON_VALUE)
-                .content("{\n" +
-                        "  \"id\": 1,\n" +
-                        "  \"desc\": \"Desc\"\n" +
-                        "}")
+                .content("""
+                        {
+                          "id": 1,
+                          "desc": "Desc"
+                        }""")
         )
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id").value(1L))
@@ -68,10 +71,11 @@ class TreeControllerTest {
 
         mockMvc.perform(put("/trees")
                 .contentType(MediaType.APPLICATION_JSON_VALUE)
-                .accept(MediaType.APPLICATION_JSON_VALUE).content("{\n" +
-                        "  \"id\": 1,\n" +
-                        "  \"desc\": \"\"\n" +
-                        "}")
+                .accept(MediaType.APPLICATION_JSON_VALUE).content("""
+                        {
+                          "id": 1,
+                          "desc": ""
+                        }""")
         )
                 .andExpect(status().isBadRequest());
 

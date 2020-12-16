@@ -36,7 +36,7 @@ class TreeControllerWebTestClientTest {
     void findOne() {
         Tree tree = new Tree();
         tree.setId(1L);
-        tree.setDesc("Desc");
+        tree.setDescription("Desc");
         when(treeService.findById(1L)).thenReturn(Optional.of(tree));
 
         webTestClient.get().uri("/trees/1")
@@ -50,16 +50,19 @@ class TreeControllerWebTestClientTest {
 
     @Test
     void create() {
-        Tree tree = new Tree(1L, "Desc");
+        Tree tree = new Tree();
+        tree.setId(1L);
+        tree.setDescription("Desc");
         when(treeService.save(any())).thenReturn(tree);
 
         webTestClient.put().uri("/trees")
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON)
-                .bodyValue("{\n" +
-                        "  \"id\": 1,\n" +
-                        "  \"desc\": \"Desc\"\n" +
-                        "}")
+                .bodyValue("""
+                        {
+                          "id": 1,
+                          "desc": "Desc"
+                        }""")
                 .exchange()
                 .expectStatus().isOk()
                 .expectBody().jsonPath("$.id", Matchers.is(1L))
@@ -73,10 +76,11 @@ class TreeControllerWebTestClientTest {
                 .uri("/trees")
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON)
-                .bodyValue("{\n" +
-                        "  \"id\": 1,\n" +
-                        "  \"desc\": \"\"\n" +
-                        "}")
+                .bodyValue("""
+                        {
+                          "id": 1,
+                          "desc": ""
+                        }""")
                 .exchange()
                 .expectStatus().isBadRequest();
     }
