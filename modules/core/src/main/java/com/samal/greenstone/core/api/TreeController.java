@@ -4,7 +4,6 @@ import com.samal.greenstone.core.api.dto.TreeDto;
 import com.samal.greenstone.core.api.dto.TreeMapper;
 import com.samal.greenstone.core.domain.Tree;
 import com.samal.greenstone.core.service.TreeService;
-import org.mapstruct.factory.Mappers;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -19,10 +18,11 @@ import java.util.List;
 @RequestMapping(value = "/trees", produces = {MediaType.APPLICATION_JSON_VALUE}, consumes = {MediaType.APPLICATION_JSON_VALUE})
 public class TreeController {
     private final TreeService treeService;
-    private final TreeMapper treeMapper = Mappers.getMapper(TreeMapper.class);
+    private final TreeMapper treeMapper;
 
-    public TreeController(TreeService service) {
+    public TreeController(TreeService service, TreeMapper treeMapper) {
         this.treeService = service;
+        this.treeMapper = treeMapper;
     }
 
     @GetMapping(value = "/{id}")
