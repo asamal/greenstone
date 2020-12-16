@@ -1,17 +1,16 @@
 package com.samal.greenstone.core.api;
 
+import com.samal.greenstone.core.api.dto.TreeDto;
+import com.samal.greenstone.core.api.dto.TreeMapper;
 import com.samal.greenstone.core.domain.Tree;
 import com.samal.greenstone.core.service.TreeService;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import org.mapstruct.factory.Mappers;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
-import javax.validation.constraints.NotEmpty;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -20,6 +19,7 @@ import java.util.List;
 @RequestMapping(value = "/trees", produces = {MediaType.APPLICATION_JSON_VALUE}, consumes = {MediaType.APPLICATION_JSON_VALUE})
 public class TreeController {
     private final TreeService treeService;
+    private final TreeMapper treeMapper = Mappers.getMapper(TreeMapper.class);
 
     public TreeController(TreeService service) {
         this.treeService = service;
@@ -27,39 +27,23 @@ public class TreeController {
 
     @GetMapping(value = "/{id}")
     public TreeDto findOne(@PathVariable Long id) {
-        Tree entity = treeService.findById(id)
+        Tree tree = treeService.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
-        return convertToDto(entity);
+        return treeMapper.entityToDto(tree);
     }
 
     @PutMapping
     public TreeDto create(@RequestBody @Valid TreeDto treeDto) {
-        Tree entity = treeService.save(convertToEntity(treeDto));
-        return convertToDto(entity);
+        Tree tree = treeService.save(treeMapper.dtoToEntity(treeDto));
+        return treeMapper.entityToDto(tree);
     }
 
     @GetMapping
     public Collection<TreeDto> findAll() {
-        Iterable<Tree> foos = this.treeService.findAll();
+        Iterable<Tree> trees = this.treeService.findAll();
         List<TreeDto> treeDtos = new ArrayList<>();
-        foos.forEach(p -> treeDtos.add(convertToDto(p)));
+        trees.forEach(p -> treeDtos.add(treeMapper.entityToDto(p)));
         return treeDtos;
     }
 
-    protected TreeDto convertToDto(Tree entity) {
-        return new TreeDto(entity.getId(), entity.getDesc());
-    }
-
-    protected Tree convertToEntity(TreeDto dto) {
-        return new Tree(dto.getId(), dto.getDesc());
-    }
-
-    @AllArgsConstructor
-    @Getter
-    @Setter
-    public static class TreeDto {
-        private long id;
-        @NotEmpty
-        private String desc;
-    }
 }

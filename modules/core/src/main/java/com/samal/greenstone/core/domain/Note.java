@@ -1,6 +1,8 @@
 package com.samal.greenstone.core.domain;
 
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Collection;
@@ -8,6 +10,8 @@ import java.util.HashSet;
 
 @Entity
 @NoArgsConstructor
+@Getter
+@Setter
 public class Note {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

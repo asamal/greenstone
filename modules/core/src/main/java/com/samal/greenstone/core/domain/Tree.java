@@ -14,18 +14,11 @@ import java.util.UUID;
 @Getter
 @Setter
 public class Tree {
-
-    public Tree(Long id, String desc) {
-        this.id = id;
-        this.desc = desc;
-    }
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private UUID uuid;
-    @Column(name = "description")
-    private String desc;
+    private String description;
     @OneToMany
     private Collection<Note> notes = new HashSet<>();
 }
