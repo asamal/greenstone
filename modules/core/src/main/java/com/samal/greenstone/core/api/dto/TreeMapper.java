@@ -5,10 +5,12 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", uses = {CaseConverter.class})
 public interface TreeMapper {
     @Mappings({
-            @Mapping(target = "description", source = "desc")
+            @Mapping(target = "description", source = "desc"),
+            @Mapping(target = "lowerCaseDesc", qualifiedBy = LowerCase.class),
+            @Mapping(target = "upperCaseDesc", qualifiedBy = UpperCase.class)
     })
     Tree dtoToEntity(TreeDto dto);
 
