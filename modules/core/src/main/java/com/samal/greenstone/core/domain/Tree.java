@@ -21,4 +21,6 @@ public class Tree {
     private String description;
     @OneToMany
     private Collection<Note> notes = new HashSet<>();
+    private String upperCaseDesc;
+    private String lowerCaseDesc;
 }

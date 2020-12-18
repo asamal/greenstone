@@ -15,4 +15,6 @@ public class TreeDto {
     @NotEmpty
     private String desc;
     private Collection<NoteDto> notes;
+    private String upperCaseDesc;
+    private String lowerCaseDesc;
 }
