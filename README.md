@@ -18,9 +18,9 @@ Start docker-compose:
 #### Links
 Login page:
 http://localhost:44401  
-Customers' page (via gateway):  
+Customers' page (via gateway):
 http://localhost:44401/customers  
-Customers' page (directly):  
+Customers' page (directly):
 http://localhost:44402/customers  
 Jaeger:
 http://localhost:16686  
@@ -43,5 +43,3 @@ List of names:
 `greenstone` - internal name used in the code  
 `GreenStone` - user-friendly name  
 `green-stone` - deprecated, used only when it is imossible to change  
-
-[]: http://localhost:44401
