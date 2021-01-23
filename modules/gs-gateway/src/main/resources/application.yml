@@ -2,7 +2,7 @@ server:
   port: 8080
 spring:
   application:
-    name: gateway
+    name: gs-gateway
   output:
     ansi:
       enabled: ALWAYS
@@ -38,7 +38,7 @@ opentracing:
     #      port: 6831
     #opentracing:
     #  jaeger:
-    #    service-name: gateway
+    #    service-name: gs-gateway
     #    enabled: true
     ##    udp-sender:
     ##      host: jaeger

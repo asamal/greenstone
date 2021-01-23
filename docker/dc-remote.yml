@@ -38,8 +38,8 @@ services:
       - POSTGRES_PASSWORD=compose-postgres
     networks:
       - greenstone-network
-  gateway:
-    image: sanek555/gsgateway:latest
+  gs-gateway:
+    image: sanek555/gs-gateway:latest
     ports:
       - "44401:8080"
     environment:

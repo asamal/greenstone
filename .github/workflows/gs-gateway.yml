@@ -1,23 +1,23 @@
 # This workflow will build a Java project with Maven
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: CI (gateway)
+name: CI (gs-gateway)
 
 on:
   push:
     branches:
       - master
     paths:
-      - "modules/gateway/**"
-      - ".github/workflows/gateway.yml"
+      - "modules/gs-gateway/**"
+      - ".github/workflows/gs-gateway.yml"
   pull_request:
     types: [ opened, synchronize, reopened ]
     paths:
-      - "modules/gateway/**"
-      - ".github/workflows/gateway.yml"
+      - "modules/gs-gateway/**"
+      - ".github/workflows/gs-gateway.yml"
 defaults:
   run:
-    working-directory: ./modules/gateway
+    working-directory: ./modules/gs-gateway
 jobs:
   build:
     name: Build
@@ -58,7 +58,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           JAVA_HOME: '' # Avoid 'java: not found' error
         with:
-          projectBaseDir: modules/gateway
+          projectBaseDir: modules/gs-gateway
 
       - name: Set up QEMU
         if: github.ref == 'refs/heads/master'
@@ -81,9 +81,9 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: sanek555/gsgateway:latest
-          file: ./modules/gateway/docker/Dockerfile # Path to the file relatively to the root directory
-          context: ./modules/gateway # Directory in which you would run 'docker build' command, . stands for root
+          tags: sanek555/gs-gateway:latest
+          file: ./modules/gs-gateway/docker/Dockerfile # Path to the file relatively to the root directory
+          context: ./modules/gs-gateway # Directory in which you would run 'docker build' command, . stands for root
 
       - name: Image digest
         if: github.ref == 'refs/heads/master'

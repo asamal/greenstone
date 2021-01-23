@@ -38,7 +38,7 @@ opentracing:
     #      port: 6831
     #opentracing:
     #  jaeger:
-    #    service-name: gateway
+    #    service-name: gs-gateway
     #    enabled: true
     ##    udp-sender:
     ##      host: jaeger

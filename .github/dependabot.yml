@@ -6,7 +6,7 @@ updates:
     interval: daily
   open-pull-requests-limit: 10
 - package-ecosystem: gradle
-  directory: "/modules/gateway"
+  directory: "/modules/gs-gateway"
   schedule:
     interval: daily
   open-pull-requests-limit: 10
