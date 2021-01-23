@@ -11,7 +11,7 @@
 
 Run from root directory:  
 Build jars:  
-`./build-modules.sh`  
+`./build-modules-local.sh`  
 Start docker-compose:   
 `./start-modules-local.sh`
 
@@ -19,7 +19,7 @@ Start docker-compose:
 
 Run from root directory:  
 Pull images:  
-`./pull-modules.sh`  
+`./build-modules-remote.sh`  
 Start docker-compose:   
 `./start-modules-remote.sh`
 
