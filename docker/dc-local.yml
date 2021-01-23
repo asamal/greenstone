@@ -40,10 +40,10 @@ services:
       - POSTGRES_PASSWORD=compose-postgres
     networks:
       - greenstone-network
-  gateway:
+  gs-gateway:
     build:
       dockerfile: docker/Dockerfile
-      context: ../modules/gateway
+      context: ../modules/gs-gateway
     ports:
       - "44401:8080"
     environment:

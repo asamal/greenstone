@@ -1,7 +1,7 @@
 # the first stage of our build will extract the layers
 FROM adoptopenjdk:15-jre-hotspot as builder
 WORKDIR application
-ARG JAR_FILE=build/libs/gateway*.jar
+ARG JAR_FILE=build/libs/gs-gateway*.jar
 COPY ${JAR_FILE} application.jar
 RUN java -Djarmode=layertools -jar application.jar extract
 
