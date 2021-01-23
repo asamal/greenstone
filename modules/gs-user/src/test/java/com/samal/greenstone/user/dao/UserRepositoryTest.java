@@ -51,8 +51,10 @@ class UserRepositoryTest {
         repository.findByName("Jack Bauer").forEach(bauer -> log.info(bauer.toString()));
         for (User bauer : repository.findByName("Jack Bauer")) {
             log.info(bauer.toString());
+            assertEquals(1L, user.getId());
             assertEquals("jack@bauer.com", user.getEmail());
             assertEquals(uuid, user.getUuid());
+            assertEquals("Jack Bauer", user.getName());
         }
         log.info("");
     }
