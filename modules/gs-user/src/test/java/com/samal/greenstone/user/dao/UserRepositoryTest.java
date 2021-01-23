@@ -21,7 +21,8 @@ class UserRepositoryTest {
     void demo() {
         // save a few customers
         User user = new User("Jack", "Bauer");
-        user.setUuid(UUID.randomUUID());
+        UUID uuid = UUID.randomUUID();
+        user.setUuid(uuid);
         user.setEmail("jack@bauer.com");
         repository.save(user);
         repository.save(new User("Chloe", "O'Brian"));
@@ -51,6 +52,7 @@ class UserRepositoryTest {
         for (User bauer : repository.findByName("Jack Bauer")) {
             log.info(bauer.toString());
             assertEquals("jack@bauer.com", user.getEmail());
+            assertEquals(uuid, user.getUuid());
         }
         log.info("");
     }
