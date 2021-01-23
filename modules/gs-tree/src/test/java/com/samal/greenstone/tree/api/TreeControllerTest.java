@@ -23,7 +23,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @ExtendWith(SpringExtension.class)
 @WebMvcTest(TreeController.class)
-@ComponentScan(basePackages = "com.samal.greenstone.core.api.dto")
+@ComponentScan(basePackages = "com.samal.greenstone.tree.api.dto")
 class TreeControllerTest {
     @Autowired
     MockMvc mockMvc;

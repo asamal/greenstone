@@ -24,7 +24,7 @@ import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class)
 @WebMvcTest(TreeController.class)
-@ComponentScan(basePackages = "com.samal.greenstone.core.api.dto")
+@ComponentScan(basePackages = "com.samal.greenstone.tree.api.dto")
 class TreeControllerWebTestClientTest {
     @Autowired
     MockMvc mockMvc;

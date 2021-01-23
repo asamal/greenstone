@@ -72,7 +72,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: sanek555/gs{{MODULE}}:latest
+          tags: sanek555/{{MODULE}}:latest
           file: ./modules/{{MODULE}}/docker/Dockerfile # Path to the file relatively to the root directory
           context: ./modules/{{MODULE}} # Directory in which you would run 'docker build' command, . stands for root
 

@@ -13,7 +13,7 @@ services:
     networks:
       - greenstone-network
   gs-tree:
-    image: sanek555/gstree:latest
+    image: sanek555/gs-tree:latest
     ports:
       - "44402:8080"
     environment:

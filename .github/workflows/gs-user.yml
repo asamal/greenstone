@@ -81,7 +81,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: sanek555/gsuser:latest
+          tags: sanek555/gs-user:latest
           file: ./modules/gs-user/docker/Dockerfile # Path to the file relatively to the root directory
           context: ./modules/gs-user # Directory in which you would run 'docker build' command, . stands for root
 

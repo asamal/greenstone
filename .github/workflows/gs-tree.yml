@@ -75,7 +75,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: sanek555/gstree:latest
+          tags: sanek555/gs-tree:latest
           file: ./modules/gs-tree/docker/Dockerfile # Path to the file relatively to the root directory
           context: ./modules/gs-tree # Directory in which you would run 'docker build' command, . stands for root
 
