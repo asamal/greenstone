@@ -12,7 +12,7 @@ import static com.github.tomakehurst.wiremock.client.WireMock.*;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
-        properties = {"core-url.port=${wiremock.server.port}"})
+        properties = {"gs-tree-url.port=${wiremock.server.port}"})
 @AutoConfigureWireMock(port = 0)
 class GatewayApplicationTests {
 
