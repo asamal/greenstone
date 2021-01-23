@@ -12,8 +12,8 @@ services:
       - "9411:9411"
     networks:
       - greenstone-network
-  core:
-    image: sanek555/gscore:latest
+  gs-tree:
+    image: sanek555/gstree:latest
     ports:
       - "44402:8080"
     environment:
@@ -45,7 +45,7 @@ services:
     environment:
       - JAEGER_UDP_HOST=jaeger
       - JAEGER_SAMPLER_MANAGER_HOST_PORT=jaeger:5778
-      - CORE_URL_HOST=core
+      - GS_TREE_URL_HOST=gs-tree
     networks:
       - greenstone-network
     depends_on:

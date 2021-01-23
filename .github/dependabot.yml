@@ -1,12 +1,17 @@
 version: 2
 updates:
 - package-ecosystem: maven
-  directory: "/modules/core"
+  directory: "/modules/gs-tree"
   schedule:
     interval: daily
   open-pull-requests-limit: 10
 - package-ecosystem: gradle
   directory: "/modules/gateway"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+- package-ecosystem: gradle
+  directory: "/modules/gs-user"
   schedule:
     interval: daily
   open-pull-requests-limit: 10

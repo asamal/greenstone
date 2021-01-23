@@ -26,9 +26,9 @@ spring:
         wiretap: true
       httpclient:
         wiretap: true
-core-url:
-  host: ${CORE_URL_HOST:localhost}
-  port: ${CORE_URL_PORT:8080}
+gs-tree-url:
+  host: ${GS_TREE_URL_HOST:localhost}
+  port: ${GS_TREE_URL_PORT:8080}
 opentracing:
   jaeger:
     enabled: true

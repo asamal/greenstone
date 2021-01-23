@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.samal</groupId>
-    <artifactId>core</artifactId>
+    <artifactId>gs-tree</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>GreenStone</name>
     <description>Green Stone project for Spring Boot</description>
@@ -17,7 +17,7 @@
     <properties>
         <java.version>14</java.version>
         <sonar.projectKey>greenstone</sonar.projectKey>
-        <sonar.projectName>GreenStone (core)</sonar.projectName>
+        <sonar.projectName>GreenStone (gs-tree)</sonar.projectName>
         <sonar.organization>asamal</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>

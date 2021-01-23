@@ -8,11 +8,11 @@ scrape_configs:
     static_configs:
       - targets: [ 'localhost:9090' ]
 
-  - job_name: 'core'
+  - job_name: 'gs-tree'
     metrics_path: '/actuator/prometheus'
     scrape_interval: 5s
     static_configs:
-      - targets: [ 'core:8080' ]
+      - targets: [ 'gs-tree:8080' ]
 
   - job_name: 'jaeger'
     metrics_path: '/metrics'

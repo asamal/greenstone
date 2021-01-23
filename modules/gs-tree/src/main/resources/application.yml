@@ -2,7 +2,7 @@ server:
   port: 8080
 spring:
   application:
-    name: core
+    name: gs-tree
   output:
     ansi:
       enabled: ALWAYS
@@ -46,7 +46,7 @@ opentracing:
     #      port: 6831
     #opentracing:
     #  jaeger:
-    #    service-name: core
+    #    service-name: gs-tree
     #    enabled: true
     ##    udp-sender:
     ##      host: jaeger
