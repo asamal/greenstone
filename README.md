@@ -1,7 +1,10 @@
 ![CI (gs-tree)](https://github.com/asamal/greenstone/workflows/CI%20(gs-tree)/badge.svg)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=greenstone&metric=alert_status)](https://sonarcloud.io/dashboard?id=greenstone)  
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=gs-tree&metric=alert_status)](https://sonarcloud.io/dashboard?id=gs-tree)  
+![CI (gs-user)](https://github.com/asamal/greenstone/workflows/CI%20(gs-user)/badge.svg)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=gs-user&metric=alert_status)](https://sonarcloud.io/dashboard?id=gs-user)
 ![CI (gs-gateway)](https://github.com/asamal/greenstone/workflows/CI%20(gs-gateway)/badge.svg)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=gs-gateway&metric=alert_status)](https://sonarcloud.io/dashboard?id=gs-gateway)
+
 
 # GreenStone
 
