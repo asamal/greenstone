@@ -22,6 +22,7 @@
     <quarkus-plugin.version>1.11.0.Final</quarkus-plugin.version>
     <compiler-plugin.version>3.8.1</compiler-plugin.version>
     <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
+    <jacoco.version>0.8.6</jacoco.version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -79,7 +80,7 @@
       <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
-        <version>0.8.6</version>
+        <version>${jacoco.version}</version>
         <executions>
           <execution>
             <id>default-prepare-agent</id>
