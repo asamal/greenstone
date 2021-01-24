@@ -90,7 +90,7 @@
           </execution>
           <execution>
             <id>report</id>
-            <phase>verify</phase>
+            <phase>post-integration-test</phase>
             <goals>
               <goal>report</goal>
             </goals>
