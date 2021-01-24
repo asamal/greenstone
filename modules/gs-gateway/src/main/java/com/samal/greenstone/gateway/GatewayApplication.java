@@ -47,7 +47,7 @@ public class GatewayApplication {
     public RouteLocator myRoutes(RouteLocatorBuilder builder, ModulesConfiguration modulesConfiguration) {
         return builder.routes()
                 .route(p -> p
-                        .path("/trees/**")
+                        .path("/trees/**", "/clients/**")
                         .filters(f -> f.addRequestHeader("Hello", "World"))
                         .uri(modulesConfiguration.getCoreUrl()))
                 .route(p -> p
@@ -64,6 +64,7 @@ public class GatewayApplication {
         return http.authorizeExchange()
                 .pathMatchers("/", "/error", "/webjars/**").permitAll()
                 .pathMatchers("/customers", "/customers/**").permitAll()
+                .pathMatchers("/clients", "/clients/**").permitAll()
                 .pathMatchers("/trees", "/trees/**").permitAll()
                 .anyExchange().authenticated()
                 .and().csrf().csrfTokenRepository(CookieServerCsrfTokenRepository.withHttpOnlyFalse())

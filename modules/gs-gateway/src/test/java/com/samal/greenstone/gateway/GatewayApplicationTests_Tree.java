@@ -28,6 +28,18 @@ class GatewayApplicationTests_Tree {
                         .withBody("{\"headers\":{\"Hello\":\"World\"}}")
                         .withHeader("Content-Type", "application/json")));
 
+        stubFor(get(urlEqualTo("/clients"))
+                .willReturn(aResponse()
+                        .withBody("{\"headers\":{\"Hello\":\"World\"}}")
+                        .withHeader("Content-Type", "application/json")));
+
+
+        webClient
+                .get().uri("/clients")
+                .exchange()
+                .expectStatus().isOk()
+                .expectBody()
+                .jsonPath("$.headers.Hello").isEqualTo("World");
 
         webClient
                 .get().uri("/trees")
