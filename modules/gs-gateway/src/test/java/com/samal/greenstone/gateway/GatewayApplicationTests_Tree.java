@@ -12,9 +12,9 @@ import static com.github.tomakehurst.wiremock.client.WireMock.*;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
-        properties = {"gs-tree-url.port=${wiremock.server.port}"})
+        properties = {"modules-config.port=${wiremock.server.port}"})
 @AutoConfigureWireMock(port = 0)
-class GatewayApplicationTests {
+class GatewayApplicationTests_Tree {
 
     @Autowired
     private WebTestClient webClient;
@@ -22,23 +22,12 @@ class GatewayApplicationTests {
     @Test
     public void contextLoads() {
 
-        stubFor(get(urlEqualTo("/customers"))
-                .willReturn(aResponse()
-                        .withBody("{\"headers\":{\"Hello\":\"World\"}}")
-                        .withHeader("Content-Type", "application/json")));
 
         stubFor(get(urlEqualTo("/trees"))
                 .willReturn(aResponse()
                         .withBody("{\"headers\":{\"Hello\":\"World\"}}")
                         .withHeader("Content-Type", "application/json")));
 
-
-        webClient
-                .get().uri("/customers")
-                .exchange()
-                .expectStatus().isOk()
-                .expectBody()
-                .jsonPath("$.headers.Hello").isEqualTo("World");
 
         webClient
                 .get().uri("/trees")

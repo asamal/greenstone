@@ -6,10 +6,10 @@ import org.springframework.validation.annotation.Validated;
 
 import javax.validation.constraints.NotEmpty;
 
-@ConfigurationProperties(prefix = "gs-tree-url")
+@ConfigurationProperties(prefix = "modules-config")
 @Validated
 @Setter
-public class CoreUrlConfiguration {
+public class ModulesConfiguration {
 
     @NotEmpty
     private String host;
@@ -17,7 +17,17 @@ public class CoreUrlConfiguration {
     @NotEmpty
     private String port;
 
+    @NotEmpty
+    private String gsUserHost;
+
+    @NotEmpty
+    private String gsUserPort;
+
     public String getCoreUrl() {
         return "http://" + host + ":" + port;
+    }
+
+    public String getGsUserUrl() {
+        return "http://" + gsUserHost + ":" + gsUserPort;
     }
 }

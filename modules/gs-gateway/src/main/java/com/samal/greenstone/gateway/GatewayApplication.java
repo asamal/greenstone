@@ -1,6 +1,6 @@
 package com.samal.greenstone.gateway;
 
-import com.samal.greenstone.gateway.config.CoreUrlConfiguration;
+import com.samal.greenstone.gateway.config.ModulesConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -22,7 +22,7 @@ import java.util.Collections;
 import java.util.Map;
 
 @EnableWebSecurity
-@EnableConfigurationProperties(CoreUrlConfiguration.class)
+@EnableConfigurationProperties(ModulesConfiguration.class)
 @SpringBootApplication
 @RestController
 public class GatewayApplication {
@@ -44,12 +44,16 @@ public class GatewayApplication {
 
 
     @Bean
-    public RouteLocator myRoutes(RouteLocatorBuilder builder, CoreUrlConfiguration coreUrlConfiguration) {
+    public RouteLocator myRoutes(RouteLocatorBuilder builder, ModulesConfiguration modulesConfiguration) {
         return builder.routes()
                 .route(p -> p
-                        .path("/customers/**", "/trees/**")
+                        .path("/trees/**")
                         .filters(f -> f.addRequestHeader("Hello", "World"))
-                        .uri(coreUrlConfiguration.getCoreUrl()))
+                        .uri(modulesConfiguration.getCoreUrl()))
+                .route(p -> p
+                        .path("/customers/**")
+                        .filters(f -> f.addRequestHeader("Hello", "World"))
+                        .uri(modulesConfiguration.getGsUserUrl()))
                 .build();
     }
 
