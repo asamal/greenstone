@@ -48,6 +48,24 @@ services:
     depends_on:
       - jaeger
       - db
+  gs-user-q:
+    build:
+      dockerfile: docker/Dockerfile
+      context: ../modules/gs-user-q
+    ports:
+      - "44404:8080"
+    environment:
+      - JAEGER_UDP_HOST=jaeger
+      - JAEGER_SAMPLER_MANAGER_HOST_PORT=jaeger:5778
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/compose-postgres
+      - SPRING_DATASOURCE_USERNAME=compose-postgres
+      - SPRING_DATASOURCE_PASSWORD=compose-postgres
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=create
+    networks:
+      - greenstone-network
+    depends_on:
+      - jaeger
+      - db
   db:
     image: 'postgres:13.1-alpine'
     ports:
