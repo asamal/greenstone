@@ -79,6 +79,7 @@ services:
       - JAEGER_SAMPLER_MANAGER_HOST_PORT=jaeger:5778
       - GS_TREE_URL_HOST=gs-tree
       - GS_USER_URL_HOST=gs-user
+      - GS_USER_Q_URL_HOST=gs-user-q
     networks:
       - greenstone-network
     depends_on:

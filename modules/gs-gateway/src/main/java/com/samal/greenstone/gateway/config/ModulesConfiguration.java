@@ -11,6 +11,7 @@ import javax.validation.constraints.NotEmpty;
 @Setter
 public class ModulesConfiguration {
 
+    public static final String HTTP = "http://";
     @NotEmpty
     private String host;
 
@@ -23,11 +24,21 @@ public class ModulesConfiguration {
     @NotEmpty
     private String gsUserPort;
 
+    @NotEmpty
+    private String gsUserQHost;
+
+    @NotEmpty
+    private String gsUserQPort;
+
     public String getCoreUrl() {
-        return "http://" + host + ":" + port;
+        return HTTP + host + ":" + port;
     }
 
     public String getGsUserUrl() {
-        return "http://" + gsUserHost + ":" + gsUserPort;
+        return HTTP + gsUserHost + ":" + gsUserPort;
+    }
+
+    public String getGsUserQUrl() {
+        return HTTP + gsUserQHost + ":" + gsUserQPort;
     }
 }
