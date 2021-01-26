@@ -31,8 +31,8 @@ modules-config:
   port: ${GS_TREE_URL_PORT:8080}
   gs-user-host: ${GS_USER_URL_HOST:localhost}
   gs-user-port: ${GS_USER_URL_PORT:8080}
-  gs-user-q-host: ${GS_USER_URL_HOST:localhost}
-  gs-user-q-port: ${GS_USER_URL_PORT:8080}
+  gs-user-q-host: ${GS_USER_Q_URL_HOST:localhost}
+  gs-user-q-port: ${GS_USER_Q_URL_PORT:8080}
 opentracing:
   jaeger:
     enabled: true
