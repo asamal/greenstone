@@ -23,11 +23,21 @@ public class ModulesConfiguration {
     @NotEmpty
     private String gsUserPort;
 
+    @NotEmpty
+    private String gsUserQHost;
+
+    @NotEmpty
+    private String gsUserQPort;
+
     public String getCoreUrl() {
         return "http://" + host + ":" + port;
     }
 
     public String getGsUserUrl() {
         return "http://" + gsUserHost + ":" + gsUserPort;
+    }
+
+    public String getGsUserQUrl() {
+        return "http://" + gsUserQHost + ":" + gsUserQPort;
     }
 }

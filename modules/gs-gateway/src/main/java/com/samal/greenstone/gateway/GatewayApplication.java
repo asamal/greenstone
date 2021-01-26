@@ -54,6 +54,10 @@ public class GatewayApplication {
                         .path("/customers/**")
                         .filters(f -> f.addRequestHeader("Hello", "World"))
                         .uri(modulesConfiguration.getGsUserUrl()))
+                .route(p -> p
+                        .path("/hello/**")
+                        .filters(f -> f.addRequestHeader("Hello", "World"))
+                        .uri(modulesConfiguration.getGsUserQUrl()))
                 .build();
     }
 
@@ -65,6 +69,7 @@ public class GatewayApplication {
                 .pathMatchers("/", "/error", "/webjars/**").permitAll()
                 .pathMatchers("/customers", "/customers/**").permitAll()
                 .pathMatchers("/clients", "/clients/**").permitAll()
+                .pathMatchers("/hello", "/hello/**").permitAll()
                 .pathMatchers("/trees", "/trees/**").permitAll()
                 .anyExchange().authenticated()
                 .and().csrf().csrfTokenRepository(CookieServerCsrfTokenRepository.withHttpOnlyFalse())
