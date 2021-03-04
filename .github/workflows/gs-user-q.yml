@@ -76,7 +76,7 @@ jobs:
         with:
           push: true
           tags: sanek555/gs-user-q:latest
-          file: ./modules/gs-user-q/src/main/docker/Dockerfile.jvm # Path to the file relatively to the root directory
+          file: ./modules/gs-user-q/docker/Dockerfile # Path to the file relatively to the root directory
           context: ./modules/gs-user-q # Directory in which you would run 'docker build' command, . stands for root
 
       - name: Image digest
