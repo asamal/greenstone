@@ -62,6 +62,9 @@ logging:
     io.jaegertracing: TRACE
     com.samal.greenstone: INFO
 
+  # Output to a file named application.log.
+  file.name: application.log
+
 management:
   endpoints:
     health:
