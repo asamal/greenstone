@@ -46,3 +46,17 @@ List of names:
 `greenstone` - internal name used in the code  
 `GreenStone` - user-friendly name  
 `green-stone` - deprecated, used only when it is imossible to change  
+
+## K8S
+
+Regenerate k8s deployment scripts from docker-compose:  
+`kompose -f dc-remote.yml`  
+
+Start deployment (in k8s directory):  
+`kubectl kustomize . | kubectl apply -f -`  
+
+Test deployed service (gs-user exposed as example):  
+http://localhost:30003/
+
+Stop deployment:  
+`kubectl kustomize . | kubectl delete -f -`

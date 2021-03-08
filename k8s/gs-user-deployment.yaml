@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f /Users/asamal/IdeaProjects/greenstone/docker/dc-remote.yml
+    kompose.version: 1.22.0 (HEAD)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: gs-user
+  name: gs-user
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: gs-user
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f /Users/asamal/IdeaProjects/greenstone/docker/dc-remote.yml
+        kompose.version: 1.22.0 (HEAD)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/greenstone-network: "true"
+        io.kompose.service: gs-user
+    spec:
+      containers:
+        - env:
+            - name: JAEGER_SAMPLER_MANAGER_HOST_PORT
+              value: jaeger:5778
+            - name: JAEGER_UDP_HOST
+              value: jaeger
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: compose-postgres
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:postgresql://db:5432/compose-postgres
+            - name: SPRING_DATASOURCE_USERNAME
+              value: compose-postgres
+            - name: SPRING_JPA_HIBERNATE_DDL_AUTO
+              value: create
+          image: sanek555/gs-user:latest
+          name: gs-user
+          ports:
+            - containerPort: 8080
+          resources: {}
+      restartPolicy: Always
+status: {}
