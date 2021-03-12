@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableScheduling
 public class GreenstoneApplication {
     public static void main(String[] args) {
+        // test comment
         log.info("Before Starting application");
         SpringApplication.run(GreenstoneApplication.class, args);
         log.debug("Starting my application in debug with {} args", args.length);
