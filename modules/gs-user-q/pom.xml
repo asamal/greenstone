@@ -23,7 +23,7 @@
     <quarkus-plugin.version>1.13.2.Final</quarkus-plugin.version>
     <compiler-plugin.version>3.8.1</compiler-plugin.version>
     <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
-    <jacoco.version>0.8.6</jacoco.version>
+    <jacoco.version>0.8.7</jacoco.version>
   </properties>
   <dependencyManagement>
     <dependencies>
