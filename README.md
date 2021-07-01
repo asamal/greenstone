@@ -1,10 +1,9 @@
-![CI (gs-tree)](https://github.com/asamal/greenstone/workflows/CI%20(gs-tree)/badge.svg)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=gs-tree&metric=alert_status)](https://sonarcloud.io/dashboard?id=gs-tree)  
-![CI (gs-user)](https://github.com/asamal/greenstone/workflows/CI%20(gs-user)/badge.svg)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=gs-user&metric=alert_status)](https://sonarcloud.io/dashboard?id=gs-user)  
-![CI (gs-gateway)](https://github.com/asamal/greenstone/workflows/CI%20(gs-gateway)/badge.svg)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=gs-gateway&metric=alert_status)](https://sonarcloud.io/dashboard?id=gs-gateway)
-
+| | CI | Sonar | Coverage
+|:---|---:|---:|---:
+| gs-tree | ![CI (gs-tree)](https://github.com/asamal/greenstone/workflows/CI%20(gs-tree)/badge.svg) | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=gs-tree&metric=alert_status)](https://sonarcloud.io/dashboard?id=gs-tree) | [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=gs-tree&metric=coverage)](https://sonarcloud.io/dashboard?id=gs-tree)
+| gs-user| ![CI (gs-user)](https://github.com/asamal/greenstone/workflows/CI%20(gs-user)/badge.svg) | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=gs-user&metric=alert_status)](https://sonarcloud.io/dashboard?id=gs-user) | [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=gs-user&metric=coverage)](https://sonarcloud.io/dashboard?id=gs-user)
+| gs-gateway | ![CI (gs-gateway)](https://github.com/asamal/greenstone/workflows/CI%20(gs-gateway)/badge.svg) | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=gs-gateway&metric=alert_status)](https://sonarcloud.io/dashboard?id=gs-gateway) | [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=gs-gateway&metric=coverage)](https://sonarcloud.io/dashboard?id=gs-gateway)
+| gs-user-q | [![CI (gs-user-q)](https://github.com/asamal/greenstone/actions/workflows/gs-user-q.yml/badge.svg)](https://github.com/asamal/greenstone/actions/workflows/gs-user-q.yml) | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=gs-user-q&metric=alert_status)](https://sonarcloud.io/dashboard?id=gs-user-q) | [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=gs-user-q&metric=coverage)](https://sonarcloud.io/dashboard?id=gs-user-q)
 
 # GreenStone
 
