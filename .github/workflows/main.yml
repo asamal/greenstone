@@ -34,3 +34,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          
+      # Runs start-modules-remote.sh
+      - name: Run start-modules-remote.sh
+        run: sh start-modules-remote.sh
