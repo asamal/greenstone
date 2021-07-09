@@ -17,20 +17,6 @@ Build jars:
 Start docker-compose:   
 `./start-modules-local.sh`
 
-#### Links
-Login page:
-http://localhost:44401  
-Customers' page (via gateway):
-http://localhost:44401/customers  
-Customers' page (directly):
-http://localhost:44402/customers  
-Jaeger:
-http://localhost:16686  
-Grafana:
-http://localhost:3000  
-Prometheus:
-http://localhost:9090  
-
 ### Remote (pull docker images from the repository)
 
 Run from root directory:  
@@ -38,6 +24,17 @@ Pull images:
 `./build-modules-remote.sh`  
 Start docker-compose:   
 `./start-modules-remote.sh`
+
+#### Links
+
+| Service | Link
+|:---|:---
+|Login page|http://localhost:44401
+|Customers' page (via gateway)|http://localhost:44401/customers
+|Customers' page (directly)|http://localhost:44402/customers
+|Jaeger|http://localhost:16686
+|Grafana|http://localhost:3000
+|Prometheus|http://localhost:9090
 
 ## Naming convention
 
