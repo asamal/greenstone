@@ -25,7 +25,7 @@ ext {
 }
 
 dependencies {
-	implementation group: 'org.webjars', name: 'bootstrap', version: '5.0.1'
+	implementation group: 'org.webjars', name: 'bootstrap', version: '5.0.2'
 	implementation group: 'org.webjars', name: 'jquery', version: '3.6.0'
 	implementation group: 'org.webjars', name: 'webjars-locator-core', version: '0.47'
 	implementation group: 'org.webjars', name: 'webjars-locator', version: '0.41'
