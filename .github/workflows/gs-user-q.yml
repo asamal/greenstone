@@ -10,7 +10,7 @@ on:
     paths:
       - "modules/gs-user-q/**"
       - ".github/workflows/gs-user-q.yml"
-  pull_request_target:
+  pull_request:
     types: [ opened, synchronize, reopened ]
     paths:
       - "modules/gs-user-q/**"
