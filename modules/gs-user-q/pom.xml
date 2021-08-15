@@ -206,8 +206,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>${compiler-plugin.version}</version>
         <configuration>
-          <source>16</source>
-          <target>16</target>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
           <annotationProcessorPaths>
             <path>
               <groupId>org.projectlombok</groupId>
