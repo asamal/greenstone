@@ -75,17 +75,20 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      # extract branch name on pull request
       - name: Set image tag on pull request
         if: github.event_name == 'pull_request'
         run: |
           echo "image_tag=$(echo ${GITHUB_HEAD_REF})" >> $GITHUB_ENV
 
-      # extract branch name on master
       - name: Set image tag on master
         if: github.event_name != 'pull_request'
         run:
           echo "image_tag=latest" >> $GITHUB_ENV
+
+      - name: Print image tag
+        if: github.event_name != 'pull_request'
+        run:
+          echo "${{ env.image_tag }}"
 
       - name: Build and push
         if: github.ref == 'refs/heads/master'
