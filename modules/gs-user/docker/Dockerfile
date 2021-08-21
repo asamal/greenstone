@@ -1,5 +1,5 @@
 # the first stage of our build will extract the layers
-FROM adoptopenjdk:15-jre-hotspot as builder
+FROM adoptopenjdk:16-jre-hotspot as builder
 WORKDIR application
 ARG JAR_FILE=build/libs/gs-user*.jar
 COPY ${JAR_FILE} application.jar
