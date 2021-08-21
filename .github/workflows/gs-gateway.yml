@@ -86,7 +86,6 @@ jobs:
           echo "image_tag=latest" >> $GITHUB_ENV
 
       - name: Print image tag
-        if: github.event_name != 'pull_request'
         run:
           echo "${{ env.image_tag }}"
 
