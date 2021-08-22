@@ -38,10 +38,13 @@ spec:
               value: compose-postgres
             - name: SPRING_JPA_HIBERNATE_DDL_AUTO
               value: create
+            - name: JAVA_TOOL_OPTIONS
+              value: "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -Xdebug"
           image: sanek555/gs-tree:latest
           name: gs-tree
           ports:
             - containerPort: 8080
+            - containerPort: 5005
           resources: {}
       restartPolicy: Always
 status: {}
