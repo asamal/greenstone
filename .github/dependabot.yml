@@ -6,25 +6,25 @@ updates:
     interval: daily
   open-pull-requests-limit: 10
   pull-request-branch-name:
-    separator: "_"
+    separator: "-"
 - package-ecosystem: maven
   directory: "/modules/gs-user-q"
   schedule:
     interval: daily
   open-pull-requests-limit: 10
   pull-request-branch-name:
-    separator: "_"
+    separator: "-"
 - package-ecosystem: gradle
   directory: "/modules/gs-gateway"
   schedule:
     interval: daily
   open-pull-requests-limit: 10
   pull-request-branch-name:
-    separator: "_"
+    separator: "-"
 - package-ecosystem: gradle
   directory: "/modules/gs-user"
   schedule:
     interval: daily
   open-pull-requests-limit: 10
   pull-request-branch-name:
-    separator: "_"
+    separator: "-"
