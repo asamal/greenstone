@@ -6,7 +6,7 @@ metadata:
     name: prometheus-server-conf
   namespace: greenstone
 data:
-  prometheus.yaml: |
+  prometheus.yml: |-
     global:
       scrape_interval: 15s
 
@@ -28,4 +28,3 @@ data:
         scrape_interval: 5s
         static_configs:
           - targets: [ 'jaeger:14269' ]
-
