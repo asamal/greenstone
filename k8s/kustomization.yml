@@ -1,4 +1,6 @@
 resources:
+  - clusterRole.yaml
+  - prometheus-configmap.yaml
   - prometheus-service.yaml
   - prometheus-deployment.yaml
   - prometheus-data-persistentvolumeclaim.yaml

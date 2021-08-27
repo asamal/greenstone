@@ -6,7 +6,7 @@ metadata:
     name: prometheus-server-conf
   namespace: greenstone
 data:
-  prometheus.yml: |-
+  prometheus.yml: |
     global:
       scrape_interval: 15s
 
