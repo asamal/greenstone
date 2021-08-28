@@ -31,7 +31,7 @@ spec:
             - name: GS_USER_Q_URL_HOST
               value: gs-user-q
             - name: GS_USER_Q_URL_PORT
-              value: 44404
+              value: "44404"
             - name: GS_USER_URL_HOST
               value: gs-user
             - name: JAEGER_SAMPLER_MANAGER_HOST_PORT
