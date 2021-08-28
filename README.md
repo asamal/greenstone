@@ -82,13 +82,16 @@ named argocd-initial-admin-secret in your Argo CD installation namespace.
 You can simply retrieve this password using kubectl  
 `kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -D`
 
-`argocd login <inital-password>`
+`argocd login localhost:8080`  
+(user: admin)
 
 `argocd account update-password`
 
 ### Register A Cluster To Deploy Apps To (Optional)
 
-`argocd cluster add docker-desktop`
+`argocd cluster add docker-desktop`  
+or  
+`argocd cluster add minikube`
 
 ### Create An Application From A Git Repository
 
