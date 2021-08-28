@@ -56,3 +56,46 @@ http://localhost:30003/
 
 Stop deployment:  
 `kubectl kustomize . | kubectl delete -f -`
+
+## Setup Argo CD
+
+Original guide https://argoproj.github.io/argo-cd/getting_started/
+
+### Install Argo CD:
+`kubectl create namespace argocd`  
+
+`kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml`
+
+### Download Argo CD CLI
+`brew install argocd`
+
+### Access The Argo CD API Server
+#### Change the argocd-server service type to LoadBalancer:
+`kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'`
+
+#### Port Forwarding
+`kubectl port-forward svc/argocd-server -n argocd 8080:443`
+
+### Login Using The CLI
+The initial password for the admin account is auto-generated and stored as clear text in the field password in a secret 
+named argocd-initial-admin-secret in your Argo CD installation namespace. 
+You can simply retrieve this password using kubectl  
+`kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -D`
+
+`argocd login <inital-password>`
+
+`argocd account update-password`
+
+### Register A Cluster To Deploy Apps To (Optional)
+
+`argocd cluster add docker-desktop`
+
+### Create An Application From A Git Repository
+
+`kubectl create namespace greenstone`
+
+Note  
+You can access Argo CD using port forwarding: add --port-forward-namespace argocd flag to every CLI command or set 
+ARGOCD_OPTS environment variable: `export ARGOCD_OPTS='--port-forward-namespace argocd'`:
+
+`argocd app create greenstone --repo https://github.com/asamal/greenstone.git --path k8s --dest-server https://kubernetes.default.svc --dest-namespace greenstone`
