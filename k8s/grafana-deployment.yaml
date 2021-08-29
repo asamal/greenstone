@@ -1,13 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    kompose.cmd: kompose convert -f /Users/asamal/IdeaProjects/greenstone/docker/dc-remote.yml
-    kompose.version: 1.22.0 (HEAD)
-  creationTimestamp: null
-  labels:
-    io.kompose.service: graphana
-  name: graphana
+  name: grafana
 spec:
   replicas: 1
   selector:
@@ -17,20 +11,15 @@ spec:
     type: Recreate
   template:
     metadata:
-      annotations:
-        kompose.cmd: kompose convert -f /Users/asamal/IdeaProjects/greenstone/docker/dc-remote.yml
-        kompose.version: 1.22.0 (HEAD)
-      creationTimestamp: null
       labels:
         io.kompose.network/greenstone-network: "true"
         io.kompose.service: graphana
     spec:
       containers:
         - image: grafana/grafana:latest
-          name: graphana
+          name: grafana
           ports:
             - containerPort: 3000
-          resources: {}
           volumeMounts:
             - mountPath: /var/lib/grafana
               name: grafana-data
@@ -39,4 +28,3 @@ spec:
         - name: grafana-data
           persistentVolumeClaim:
             claimName: grafana-data
-status: {}
