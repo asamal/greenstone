@@ -1,5 +1,5 @@
 resources:
-  - clusterRole.yaml
+  - prometheus-clusterrole.yaml
   - prometheus-configmap.yaml
   - prometheus-service.yaml
   - prometheus-deployment.yaml
