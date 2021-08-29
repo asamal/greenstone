@@ -19,12 +19,16 @@ spec:
         - env:
             - name: GS_TREE_URL_HOST
               value: gs-tree
+            - name: GS_TREE_URL_PORT
+              value: "44402"
             - name: GS_USER_Q_URL_HOST
               value: gs-user-q
             - name: GS_USER_Q_URL_PORT
               value: "44404"
             - name: GS_USER_URL_HOST
               value: gs-user
+            - name: GS_USER_URL_PORT
+              value: "44403"
             - name: JAEGER_SAMPLER_MANAGER_HOST_PORT
               value: jaeger:5778
             - name: JAEGER_UDP_HOST
