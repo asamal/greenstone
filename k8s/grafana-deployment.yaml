@@ -23,7 +23,6 @@ spec:
           volumeMounts:
             - mountPath: /var/lib/grafana
               name: grafana-data
-      restartPolicy: Always
       volumes:
         - name: grafana-data
           persistentVolumeClaim:
