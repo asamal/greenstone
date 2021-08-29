@@ -16,8 +16,8 @@ resources:
   - gs-gateway-service.yaml
   - gs-gateway-deployment.yaml
   - greenstone-network-networkpolicy.yaml
-  - graphana-service.yaml
-  - graphana-deployment.yaml
+  - grafana-service.yaml
+  - grafana-deployment.yaml
   - grafana-data-persistentvolumeclaim.yaml
   - db-service.yaml
   - db-deployment.yaml
