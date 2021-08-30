@@ -15,7 +15,7 @@ import java.util.Collection;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/trees", produces = {MediaType.APPLICATION_JSON_VALUE}, consumes = {MediaType.APPLICATION_JSON_VALUE})
+@RequestMapping(value = "/trees", produces = {MediaType.APPLICATION_JSON_VALUE})
 public class TreeController {
     private final TreeService treeService;
     private final TreeMapper treeMapper;
