@@ -5,4 +5,5 @@ kubectl port-forward svc/prometheus-service -n greenstone 3003:8080 &
 kubectl port-forward svc/grafana -n greenstone 3004:3000 &
 kubectl port-forward svc/gs-tree -n greenstone 3005:44402 &
 kubectl port-forward svc/gs-user -n greenstone 3006:44403 &
-kubectl port-forward svc/gs-user-q -n greenstone 3007:44404
+kubectl port-forward svc/gs-user-q -n greenstone 3007:44404 &
+kubectl port-forward svc/db -n greenstone 3008:5432
