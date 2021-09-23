@@ -52,7 +52,7 @@ dependencies {
 	testImplementation 'org.springframework.cloud:spring-cloud-contract-wiremock'
 	testImplementation 'org.springframework.security:spring-security-test'
 
-	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: '2.5.4'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: '2.5.5'
 	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-integration', version: '2.5.4'
 
 
