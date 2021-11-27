@@ -38,9 +38,6 @@ spring:
 #    password: <password>
     hikari:
       idle-timeout: 10000
-  mvc:
-    pathmatch:
-      matching-strategy: ant-path-matcher
 opentracing:
   jaeger:
     log-spans: true
