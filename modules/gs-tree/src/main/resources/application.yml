@@ -76,3 +76,6 @@ management:
   metrics:
     tags:
       application: MonitoringSpringDemoProject
+springdoc:
+  packagesToScan: package1, package2
+  pathsToMatch: /trees
