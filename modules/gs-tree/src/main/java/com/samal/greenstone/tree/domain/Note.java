@@ -18,6 +18,7 @@ public class Note {
     private Long id;
     @ManyToOne
     private Tree tree;
+    @Enumerated(value = EnumType.STRING)
     private Operation operation;
     @OneToOne
     private Snapshot snapshot;
