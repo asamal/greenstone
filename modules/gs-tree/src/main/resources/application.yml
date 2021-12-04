@@ -83,3 +83,6 @@ springdoc:
 graphql:
   playground:
     enabled: true
+  servlet:
+    websocket:
+      enabled: false
