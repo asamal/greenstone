@@ -1,5 +1,4 @@
 spring:
   jpa:
-    properties:
-      hibernate:
-        ddl-auto: none
+    hibernate:
+      ddl-auto: none
