@@ -18,9 +18,10 @@ spring:
   #            client-secret: XIY9Nw3ahDtlv6DWUKBbWZDe
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+    hibernate:
+      ddl-auto: create-drop
     properties:
       hibernate:
-        ddl-auto: create-drop
         show_sql: false
         format_sql: true
         use_sql_comments: true
@@ -34,8 +35,8 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:postgresql://localhost:5432/compose-postgres
     driver-class-name: org.postgresql.Driver
-#    username: <username>
-#    password: <password>
+    #    username: <username>
+    #    password: <password>
     hikari:
       idle-timeout: 10000
 opentracing:
