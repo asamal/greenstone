@@ -1,0 +1,8 @@
+type Tree {
+    id: ID!
+    uuid: ID
+    description: String!
+    upperCaseDesc: String
+    lowerCaseDesc: String
+    notes: [Note]
+}
