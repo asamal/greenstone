@@ -1,0 +1,4 @@
+# All available trees
+type Query {
+    tree(id: ID): Tree
+}

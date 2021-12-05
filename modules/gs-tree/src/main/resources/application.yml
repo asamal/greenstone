@@ -80,3 +80,9 @@ management:
 springdoc:
   packagesToScan: package1, package2
   pathsToMatch: /trees
+graphql:
+  playground:
+    enabled: true
+  servlet:
+    websocket:
+      enabled: false

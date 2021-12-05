@@ -1,8 +1,6 @@
 package com.samal.greenstone.tree.domain;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Collection;
@@ -13,6 +11,8 @@ import java.util.UUID;
 @NoArgsConstructor
 @Getter
 @Setter
+@Builder
+@AllArgsConstructor
 public class Tree {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
