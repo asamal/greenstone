@@ -53,7 +53,7 @@ dependencies {
 	testImplementation 'org.springframework.security:spring-security-test'
 
 	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: '2.6.2'
-	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-integration', version: '2.6.1'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-integration', version: '2.6.2'
 
 
 }
