@@ -59,6 +59,8 @@ jobs:
           JAVA_HOME: '' # Avoid 'java: not found' error
         with:
           projectBaseDir: modules/gs-user
+          args: >
+            -Dsonar.test.exclusions=build.gradle
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
