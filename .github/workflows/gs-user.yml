@@ -60,7 +60,7 @@ jobs:
         with:
           projectBaseDir: modules/gs-user
           args: >
-            -Dsonar.exclusions=build.gradle
+            -Dsonar.exclusions=**/*.gradle
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
