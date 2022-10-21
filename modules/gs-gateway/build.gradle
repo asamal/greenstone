@@ -22,7 +22,7 @@ repositories {
 
 ext {
 	set('springCloudVersion', "2021.0.0-RC1")
-	springBootVersion = '2.7.1'
+	springBootVersion = '2.7.5'
 }
 
 dependencies {
