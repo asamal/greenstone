@@ -21,7 +21,7 @@
     <sonar.organization>asamal</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     <lombok.version>1.18.26</lombok.version>
-    <graphql.version>14.0.0</graphql.version>
+    <graphql.version>15.0.0</graphql.version>
   </properties>
 
   <dependencies>
@@ -81,7 +81,7 @@
     <dependency>
       <groupId>org.springdoc</groupId>
       <artifactId>springdoc-openapi-ui</artifactId>
-      <version>1.6.11</version>
+      <version>1.6.14</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -95,17 +95,17 @@
     <dependency>
       <groupId>io.micrometer</groupId>
       <artifactId>micrometer-registry-prometheus</artifactId>
-      <version>1.9.5</version>
+      <version>1.10.4</version>
     </dependency>
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
-      <version>42.5.0</version>
+      <version>42.5.4</version>
     </dependency>
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-entitymanager</artifactId>
-      <version>5.6.12.Final</version>
+      <version>5.6.15.Final</version>
     </dependency>
     <dependency>
       <groupId>org.mapstruct</groupId>
@@ -162,7 +162,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.10.1</version>
+        <version>3.11.0</version>
         <configuration>
           <source>${java.version}</source>
           <target>${java.version}</target>
@@ -175,7 +175,7 @@
             <path>
               <groupId>org.mapstruct</groupId>
               <artifactId>mapstruct-processor</artifactId>
-              <version>1.4.1.Final</version>
+              <version>1.5.3.Final</version>
             </path>
           </annotationProcessorPaths>
         </configuration>
