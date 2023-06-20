@@ -3,6 +3,7 @@ plugins {
     id 'io.spring.dependency-management' version '1.1.0'
     id 'java'
     id 'jacoco'
+    id 'org.sonarqube' version '4.2.1.3168'
 }
 
 group = 'com.samal.greenstone'
@@ -78,5 +79,17 @@ jacocoTestReport {
         xml.enabled true
         csv.enabled false
         html.destination file("${buildDir}/jacocoHtml")
+    }
+}
+
+sonar {
+    properties {
+        property("sonar.organization", "asamal")
+        property("sonar.projectKey", "gs-user")
+        property("sonar.host.url", "https://sonarcloud.io")
+        property("sonar.sources", "src/main/java")
+        property("sonar.tests", "src/test/java")
+        property("sonar.java.binaries", "build/classes")
+        property("ssonar.jacoco.reportPaths", "build/reports/jacoco/test")
     }
 }
