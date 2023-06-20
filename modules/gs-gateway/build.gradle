@@ -91,7 +91,12 @@ jacocoTestReport {
 
 sonar {
 	properties {
+		property("sonar.organization", "asamal")
 		property("sonar.projectKey", "gs-gateway")
 		property("sonar.host.url", "https://sonarcloud.io")
+		property("sonar.sources", "src/main/java")
+		property("sonar.tests", "src/test/java")
+		property("sonar.java.binaries", "build/classes")
+		property("ssonar.jacoco.reportPaths", "build/reports/jacoco/test")
 	}
 }
