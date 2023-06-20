@@ -20,7 +20,7 @@
     <sonar.projectName>GreenStone (gs-tree)</sonar.projectName>
     <sonar.organization>asamal</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-    <lombok.version>1.18.26</lombok.version>
+    <lombok.version>1.18.28</lombok.version>
     <graphql.version>15.0.0</graphql.version>
   </properties>
 
