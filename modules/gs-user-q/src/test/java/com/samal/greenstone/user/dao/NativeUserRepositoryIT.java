@@ -1,7 +1,7 @@
 package com.samal.greenstone.user.dao;
 
-import io.quarkus.test.junit.NativeImageTest;
+import io.quarkus.test.junit.QuarkusIntegrationTest;
 
-@NativeImageTest
+@QuarkusIntegrationTest
 public class NativeUserRepositoryIT extends UserRepositoryTest{
 }
