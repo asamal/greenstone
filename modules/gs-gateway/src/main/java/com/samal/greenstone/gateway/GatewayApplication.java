@@ -10,7 +10,7 @@ import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.cloud.gateway.route.builder.UriSpec;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.server.reactive.ServerHttpRequest;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
 import org.springframework.security.config.web.server.ServerHttpSecurity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.core.user.OAuth2User;
@@ -18,13 +18,15 @@ import org.springframework.security.web.server.SecurityWebFilterChain;
 import org.springframework.security.web.server.csrf.CookieServerCsrfTokenRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.reactive.config.EnableWebFlux;
 import reactor.core.publisher.Mono;
 
 import java.util.Collections;
 import java.util.Map;
 import java.util.function.Function;
 
-@EnableWebSecurity
+@EnableWebFlux
+@EnableWebFluxSecurity
 @EnableConfigurationProperties(ModulesConfiguration.class)
 @SpringBootApplication
 @RestController
@@ -71,16 +73,19 @@ public class GatewayApplication {
 
     @Bean
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) {
-
-        return http.authorizeExchange()
-                .pathMatchers("/", "/error", "/webjars/**").permitAll()
-                .pathMatchers("/customers", "/customers/**").permitAll()
-                .pathMatchers("/clients", "/clients/**").permitAll()
-                .pathMatchers("/hello", "/hello/**").permitAll()
-                .pathMatchers("/trees", "/trees/**").permitAll()
-                .anyExchange().authenticated()
-                .and().csrf().csrfTokenRepository(CookieServerCsrfTokenRepository.withHttpOnlyFalse())
-                .and().logout()
-                .and().oauth2Login().and().build();
+        return http
+                .authorizeExchange((exchanges)
+                        -> exchanges.pathMatchers("/", "/error", "/webjars/**").permitAll()
+                        .pathMatchers("/customers", "/customers/**").permitAll()
+                        .pathMatchers("/clients", "/clients/**").permitAll()
+                        .pathMatchers("/hello", "/hello/**").permitAll()
+                        .pathMatchers("/trees", "/trees/**").permitAll()
+                        .anyExchange().authenticated())
+                .csrf((csrf) -> csrf.csrfTokenRepository(CookieServerCsrfTokenRepository.withHttpOnlyFalse()))
+                .logout(logout -> {
+                })
+                .oauth2Login(oauth2Login -> {
+                })
+                .build();
     }
 }
