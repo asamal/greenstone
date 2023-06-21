@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '2.7.1'
+    id 'org.springframework.boot' version '3.0.3'
     id 'io.spring.dependency-management' version '1.1.0'
     id 'java'
     id 'jacoco'
@@ -9,6 +9,7 @@ plugins {
 group = 'com.samal.greenstone'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
+targetCompatibility = '17'
 
 configurations {
     compileOnly {
@@ -22,8 +23,8 @@ repositories {
 }
 
 ext {
-    set('springCloudVersion', "2020.0.3")
-    springBootVersion = '2.7.1'
+    set('springCloudVersion', "2022.0.3")
+    springBootVersion = '3.0.3'
 }
 
 dependencies {
@@ -76,9 +77,9 @@ jacocoTestReport {
 
 jacocoTestReport {
     reports {
-        xml.enabled true
-        csv.enabled false
-        html.destination file("${buildDir}/jacocoHtml")
+        xml.required = true
+        csv.required = false
+        html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
     }
 }
 
