@@ -13,9 +13,9 @@ public class GreetingResourceTest {
 
     @Test
     public void testHelloEndpoint() {
-        given()
+        given().log().all()
           .when().get("/hello")
-          .then()
+          .then().log().all()
              .statusCode(200)
              .body(is("Hello RESTEasy"));
     }
