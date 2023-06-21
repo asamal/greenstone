@@ -22,8 +22,8 @@ repositories {
 }
 
 ext {
-    set('springCloudVersion', "2020.0.3")
-    springBootVersion = '2.7.1'
+    set('springCloudVersion', "2022.0.3")
+    springBootVersion = '3.0.3'
 }
 
 dependencies {
@@ -76,9 +76,9 @@ jacocoTestReport {
 
 jacocoTestReport {
     reports {
-        xml.required true
-        csv.required false
-        html.destination file("${buildDir}/jacocoHtml")
+        xml.required = true
+        csv.required = false
+        html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
     }
 }
 
