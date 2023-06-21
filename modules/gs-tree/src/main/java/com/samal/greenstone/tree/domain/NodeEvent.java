@@ -1,6 +1,6 @@
 package com.samal.greenstone.tree.domain;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.time.ZonedDateTime;
 import java.util.UUID;
 
