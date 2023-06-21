@@ -22,7 +22,7 @@ repositories {
 }
 
 ext {
-	set('springCloudVersion', "2021.0.0-RC1")
+	set('springCloudVersion', "2022.0.3")
 	springBootVersion = '3.1.0'
 }
 
@@ -34,6 +34,7 @@ dependencies {
 	implementation group: 'org.webjars', name: 'js-cookie', version: '2.2.1'
 
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
 	implementation 'org.springframework.cloud:spring-cloud-starter-gateway'
 	implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
@@ -83,7 +84,9 @@ jacocoTestReport {
 
 jacocoTestReport {
 	reports {
-        html.destination file("${buildDir}/jacocoHtml")
+		xml.required = true
+		csv.required = false
+		html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
 	}
 }
 
