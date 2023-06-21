@@ -88,7 +88,7 @@ jobs:
 
       - name: Build and push
         id: docker_build
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v4
         with:
           push: true
           tags: sanek555/gs-user:${{ env.image_tag }}
