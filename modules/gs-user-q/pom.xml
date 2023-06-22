@@ -12,7 +12,7 @@
         <sonar.projectName>GreenStone (gs-user-q)</sonar.projectName>
         <sonar.organization>asamal</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-        <sonar.coverage.jacoco.xmlReportPaths>../gs-user-q/target/jacoco-report/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+        <sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/jacoco-report/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
         <surefire-plugin.version>3.1.2</surefire-plugin.version>
         <quarkus.platform.version>3.1.2.Final</quarkus.platform.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
