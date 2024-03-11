@@ -30,7 +30,7 @@ dependencies {
 	implementation group: 'org.webjars', name: 'bootstrap', version: '5.3.2'
 	implementation group: 'org.webjars', name: 'jquery', version: '3.7.1'
 	implementation group: 'org.webjars', name: 'webjars-locator-core', version: '0.55'
-	implementation group: 'org.webjars', name: 'webjars-locator', version: '0.50'
+	implementation group: 'org.webjars', name: 'webjars-locator', version: '0.51'
 	implementation group: 'org.webjars', name: 'js-cookie', version: '3.0.1'
 
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
