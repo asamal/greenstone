@@ -19,7 +19,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.parameters>true</maven.compiler.parameters>
         <compiler-plugin.version>3.12.1</compiler-plugin.version>
-        <lombok.version>1.18.30</lombok.version>
+        <lombok.version>1.18.32</lombok.version>
         <spotless.version>2.43.0</spotless.version>
     </properties>
     <dependencyManagement>
