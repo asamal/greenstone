@@ -20,7 +20,7 @@
     <sonar.projectName>GreenStone (gs-tree)</sonar.projectName>
     <sonar.organization>asamal</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-    <lombok.version>1.18.32</lombok.version>
+    <lombok.version>1.18.34</lombok.version>
     <graphql.version>15.1.0</graphql.version>
   </properties>
 
@@ -91,17 +91,17 @@
     <dependency>
       <groupId>io.micrometer</groupId>
       <artifactId>micrometer-registry-prometheus</artifactId>
-      <version>1.13.1</version>
+      <version>1.13.3</version>
     </dependency>
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
-      <version>42.7.3</version>
+      <version>42.7.4</version>
     </dependency>
     <dependency>
       <groupId>org.mapstruct</groupId>
       <artifactId>mapstruct</artifactId>
-      <version>1.5.5.Final</version>
+      <version>1.6.0</version>
     </dependency>
     <dependency>
       <groupId>com.graphql-java-kickstart</groupId>
@@ -166,7 +166,7 @@
             <path>
               <groupId>org.mapstruct</groupId>
               <artifactId>mapstruct-processor</artifactId>
-              <version>1.5.5.Final</version>
+              <version>1.6.0</version>
             </path>
           </annotationProcessorPaths>
         </configuration>

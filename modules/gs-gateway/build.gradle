@@ -1,6 +1,6 @@
 plugins {
 	id 'org.springframework.boot' version '3.2.5'
-	id 'io.spring.dependency-management' version '1.1.5'
+	id 'io.spring.dependency-management' version '1.1.6'
 	id 'java'
 	id 'jacoco'
 	id 'org.sonarqube' version '5.1.0.4882'
@@ -23,7 +23,7 @@ repositories {
 
 ext {
 	set('springCloudVersion', "2023.0.0")
-	springBootVersion = '3.3.1'
+	springBootVersion = '3.3.3'
 }
 
 dependencies {
