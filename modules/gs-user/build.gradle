@@ -1,9 +1,9 @@
 plugins {
     id 'org.springframework.boot' version '3.2.5'
-    id 'io.spring.dependency-management' version '1.1.5'
+    id 'io.spring.dependency-management' version '1.1.6'
     id 'java'
     id 'jacoco'
-    id 'org.sonarqube' version '5.0.0.4638'
+    id 'org.sonarqube' version '5.1.0.4872'
 }
 
 group = 'com.samal.greenstone'
@@ -24,7 +24,7 @@ repositories {
 
 ext {
     set('springCloudVersion', "2022.0.3")
-    springBootVersion = '3.3.1'
+    springBootVersion = '3.3.3'
 }
 
 dependencies {
@@ -33,17 +33,16 @@ dependencies {
     implementation group: 'io.opentracing.contrib', name: 'opentracing-spring-jaeger-web-starter', version: '3.3.1'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-rest', version: "$springBootVersion"
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: "$springBootVersion"
-    implementation group: 'org.postgresql', name: 'postgresql', version: '42.7.3'
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.7.4'
     testImplementation group: 'com.h2database', name: 'h2', version: '2.3.232'
-
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.cloud:spring-cloud-starter-contract-verifier'
 
-    compileOnly 'org.projectlombok:lombok:1.18.32'
-    annotationProcessor 'org.projectlombok:lombok:1.18.32'
+    compileOnly 'org.projectlombok:lombok:1.18.34'
+    annotationProcessor 'org.projectlombok:lombok:1.18.34'
 
-    testCompileOnly 'org.projectlombok:lombok:1.18.32'
-    testAnnotationProcessor 'org.projectlombok:lombok:1.18.32'
+    testCompileOnly 'org.projectlombok:lombok:1.18.34'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.34'
 
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
