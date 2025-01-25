@@ -8,7 +8,7 @@ plugins {
 
 group = 'com.samal.greenstone'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+sourceCompatibility = '21'
 
 configurations {
 	compileOnly {
@@ -72,7 +72,7 @@ test {
 }
 
 jacoco {
-	toolVersion = "0.8.7"
+	toolVersion = "0.8.12"
 }
 
 test {
